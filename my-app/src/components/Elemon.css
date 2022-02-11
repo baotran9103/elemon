@@ -4,3 +4,36 @@
     padding: 2rem;
     flex-direction: column;
 }
+
+.items{
+    display: flex;
+    width: 100%;
+    gap:2rem;
+    flex-wrap: wrap;
+}   
+.item__item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    gap:1rem
+
+}
+
+/* .choices{
+    display: grid;
+    grid-template-columns:1fr;
+    height:100%;
+} */
+
+
+@media screen and (max-width:768px) {
+    .item{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        justify-items: center;
+    }
+    
+}

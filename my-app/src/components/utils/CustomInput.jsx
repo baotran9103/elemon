@@ -8,12 +8,12 @@ function CustomInput({label,useValues,helperText,type="text",disabled=false}) {
         style={{marginBottom:'0.5rem'}}
         disabled={disabled}
         type={type}
-  helperText={helperText}
-  id="demo-helper-text-misaligned"
-  label={label}
-  value={value}
-  onChange={e=>setvalue(e.target.value)}
-/>
+        helperText={helperText}
+        id="demo-helper-text-misaligned"
+        label={label}
+        value={value}
+        onChange={e=>setvalue(e.target.value)}
+      />
     </div>
   )
 }

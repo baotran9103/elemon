@@ -15,9 +15,9 @@ class myPet{
         this.level=props.level
         this.star = props.star
         this.skill1 = this.cleanString(props.skill1) >0? this.cleanString(props.skill1):0
-        this.skill2 = this.cleanString(props.skill2) >0? this.cleanString(props.skill2):0
-        this.skill3 = this.cleanString(props.skill3) >0? this.cleanString(props.skill3):0
-        this.skill4 = this.cleanString(props.skill4) >0? this.cleanString(props.skill4):0
+        this.skill2 = this.cleanString(props.skill2) >0 && props.star>=3? this.cleanString(props.skill2):0
+        this.skill3 = this.cleanString(props.skill3) >0 && props.star>=6? this.cleanString(props.skill3):0
+        this.skill4 = this.cleanString(props.skill4) >0 && props.star>=9? this.cleanString(props.skill4):0
         this.TotalSkill = this.getSkills();
         this.power = props.power? props.power :0;
     }
@@ -28,6 +28,7 @@ class myPet{
     }
 
     getSkills(){
+
         let sum = this.skill1 + this.skill2+ this.skill3 + this.skill4
         let c  = 5 
         c += this.skill1> 0 
