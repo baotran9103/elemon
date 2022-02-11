@@ -6,3 +6,4 @@ export const DefaultAura = 5
 export const DefaultLevel = 10
 export const DefaultStar = 1
 export const DefaultSkill = 0
+export const DefaultBody = 5

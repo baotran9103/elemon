@@ -20,7 +20,7 @@ const CustomSelect = ({
     };
     return (
       <div id={id}>
-        <FormControl sx={{ m: 1, minWidth: 120, maxWidth: 200 }}>
+        <FormControl sx={{ m: 1, minWidth: 200, maxWidth: 300 }}>
           <InputLabel id="demo-simple-select-helper-label">{Label}</InputLabel>
           <Select
             labelId="demo-simple-select-helper-label"
@@ -29,9 +29,7 @@ const CustomSelect = ({
             label={Label}
             onChange={handleChange}
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
+          
             {items?.map((item, idx) => (
               <MenuItem value={item[itemID]} key={`${idx}_${item[itemName]}`}>
                 {item[itemName]}

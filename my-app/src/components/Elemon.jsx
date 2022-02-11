@@ -1,6 +1,6 @@
-import React, { useState ,forwardRef,useContext} from "react";
+import React, { useState, forwardRef, useContext } from "react";
 import { getPower } from "./utils/Functions";
-import {ElemonContext} from './ElemonContext'
+import { ElemonContext } from "./ElemonContext";
 import "./Elemon.css";
 // import axios from "axios";
 import CustomInput from "./utils/CustomInput";
@@ -8,18 +8,27 @@ import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 
-import { RarityCard, AuraCard, SkillCards,NameCard,ClassCard } from "./Cards/Cards";
+import {
+  RarityCard,
+  AuraCard,
+  SkillCards,
+  NameCard,
+  ClassCard,
+  BodyParts,
+} from "./Cards/Cards";
+import AskElemonId from "./AskElemonId";
 const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 export default function Elemon() {
-  const myContext = useContext(ElemonContext)
+  const myContext = useContext(ElemonContext);
 
   const [level, setlevel] = myContext.level;
   const [star, setstar] = myContext.star;
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [dialogopen, setdialogopen] = useState(false);
   const submitHandler = () => {
-    let data = myContext.data
+    let data = myContext.data;
     setOpen(true);
     let res = getPower(data);
   };
@@ -31,6 +40,13 @@ export default function Elemon() {
 
     setOpen(false);
   };
+  const handleClickOpenDialog = () => {
+    setdialogopen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setdialogopen(false);
+  };
   return (
     <div>
       <div className="form_inputs">
@@ -38,7 +54,6 @@ export default function Elemon() {
           <div className="item__item">
             <NameCard />
             <ClassCard />
-           
 
             <CustomInput
               type="number"
@@ -51,22 +66,27 @@ export default function Elemon() {
               label="Star"
               helperText="Please Enter Stars"
               useValues={[star, setstar]}
-
             />
           </div>
 
           <div className="item__item">
             <div>
-              <RarityCard  />
-              <AuraCard  />
+              <RarityCard />
+              <AuraCard />
             </div>
-            <SkillCards  star={star}/>
+            <SkillCards star={star} />
           </div>
+        </div>
+        <div className="item__item">
+          <BodyParts />
         </div>
 
         <div
-          style={{ display: "flex", justifyContent: "center", padding: "3rem" }}
+          style={{ display: "flex", justifyContent: "center", padding: "3rem",gap:'0 2rem' }}
         >
+          <Button variant="contained" size="medium"  onClick={handleClickOpenDialog}>
+            Elemon ID
+          </Button>
           <Button variant="contained" size="medium" onClick={submitHandler}>
             Get Power
           </Button>
@@ -80,6 +100,7 @@ export default function Elemon() {
             Success!
           </Alert>
         </Snackbar>
+        <AskElemonId open={dialogopen} handleClose={handleCloseDialog} />
       </div>
     </div>
   );
