@@ -20,6 +20,12 @@ class myPet{
         this.skill4 = this.cleanString(props.skill4) >0 && props.star>=9? this.cleanString(props.skill4):0
         this.TotalSkill = this.getSkills();
         this.power = props.power? props.power :0;
+        this.body1 = props.body1;
+        this.body2 = props.body2;
+        this.body3 = props.body3;
+        this.body4 = props.body4;
+        this.body5 = props.body5;
+        this.body6 = props.body6;
     }
 
     cleanString(data){

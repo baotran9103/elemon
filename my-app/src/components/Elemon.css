@@ -1,39 +1,64 @@
-.form_inputs{
-    display: flex;
-    gap: 1rem;
-    padding: 2rem;
-    flex-direction: column;
+.form_inputs {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  flex-direction: column;
 }
 
-.items{
-    display: flex;
-    width: 100%;
-    gap:2rem;
-    flex-wrap: wrap;
-}   
+.items {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
 .item__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.body_parts {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.body {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  min-width: 130px;
+  min-height: 120px;
+}
+
+.MuiDialog-paper {
+  width: 500px;
+}
+@media screen and (max-width: 768px) {
+  .item {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
-    gap:1rem
-
-}
-
-/* .choices{
+    justify-content: flex-start;
+    justify-items: center;
+  }
+  .body_parts {
     display: grid;
-    grid-template-columns:1fr;
-    height:100%;
-} */
 
-
-@media screen and (max-width:768px) {
-    .item{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        justify-items: center;
-    }
-    
+    grid-template-columns: 1fr 1fr;
+  }
+  .body_parts .MuiFormControl-root {
+    min-width: 120px;
+  }
+  .MuiDialog-root {
+    width: 100vw;
+  }
+  .MuiDialog-paper {
+    width: 100%;
+  }
 }
