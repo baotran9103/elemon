@@ -4447,29 +4447,41 @@ export const BodyQuality=[
     {
         id:3,
         name:'Rare 30'
+        ,point:30
     },
     {
         id:4,
         name:'Rare 40'
+        ,point:40
     },
     {
         id:5,
         name:'Epic 1'
+        ,point:70
+        
     },
     {
         id:6,
         name:'Epic 2'
+        ,point:100
+
     },
     {
         id:7,
         name:'Legend 1'
+        ,point:130
+
     },
     {
         id:8,
         name:'Legend 2'
+        ,point:160
+
     },
     {
         id:9,
         name:'Mystical'
+        ,point:190
+
     },
 ]

@@ -20,6 +20,7 @@ export default function ElemonContextProvider({children}){
     const [body4, setbody4] = useState(d.DefaultBody)
     const [body5, setbody5] = useState(d.DefaultBody)
     const [body6, setbody6] = useState(d.DefaultBody)
+    const [mypet, setmypet] = useState()
     const data = {
         pet: pet,
         elclass: elclass,
@@ -38,7 +39,31 @@ export default function ElemonContextProvider({children}){
         body5 :body5,
         body6 : body6
       };
-   
+    const updateData = (data)=>{
+        if(data.length===0) return;
+        let info = data[0]
+        setlevel(info.level)
+        if(info?.skills[0]) setskill1(info.skills[0].level)
+        if(info?.skills[1]) setskill2(info.skills[1].level)
+        if(info?.skills[2]) setskill3(info.skills[2].level)
+        if(info?.skills[3]) setskill4(info.skills[3].level)
+        setstar(info.star)
+        setbody1(info.bodyPart[0].quality)
+        setbody2(info.bodyPart[1].quality)
+        setbody3(info.bodyPart[2].quality)
+        setbody4(info.bodyPart[3].quality)
+        setbody5(info.bodyPart[4].quality)
+        setbody6(info.bodyPart[5].quality)
+    }
+    const updateMore = (data)=>{
+        console.log(data)
+        if(data.length===0) return;
+        let info = data[0]
+        setpet(info.baseCardId)
+        setelclass(info.class)
+        setaura(info.quality)
+        setrare(info.rarity)
+    }
     const value = {
         pet:[pet, setpet] ,
         elclass: [elclass, setelclass]   ,
@@ -56,8 +81,10 @@ export default function ElemonContextProvider({children}){
         body4:  [body4, setbody4] ,
         body5: [body5, setbody5]  ,
         body6: [body6, setbody6] ,
-
-        data:data
+        mypet:[mypet, setmypet],
+        data:data,
+        updateData:updateData,
+        updateMore:updateMore
     }
 
 
