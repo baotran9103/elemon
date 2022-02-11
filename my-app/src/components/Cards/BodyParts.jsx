@@ -5,7 +5,7 @@ import { ElemonContext } from "../ElemonContext";
 
 function BodyParts() {
   const myContext = useContext(ElemonContext);
-  const [pet, setpet] = myContext.pet;
+
   const [body1, setbody1] = myContext.body1;
   const [body2, setbody2] = myContext.body2;
   const [body3, setbody3] = myContext.body3;
@@ -41,7 +41,7 @@ function BodyParts() {
       id: "BodyPart5",
       Label: "Body Part 5",
       HelperText: "Select Body Part 5",
-      useValues: [body1, setbody1],
+      useValues: [body5, setbody5],
     },
     {
       id: "BodyPart6",
