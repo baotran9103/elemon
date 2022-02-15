@@ -1,0 +1,1 @@
+import { myPet } from './myPet';
