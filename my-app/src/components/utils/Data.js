@@ -20,6 +20,10 @@ export const Elemons = [
         id:5
     },
     {
+        name: "Raizer",
+        id:6
+    },
+    {
         name: "Earkoo",
         id:7
     },
@@ -95,75 +99,93 @@ export const Elemons = [
 export const ElClass = [
     {
         id:1,
-        name:'Normal'
+        name:'Normal',
+        logo:'https://app.elemon.io/assets/images/element/Normal.png'
     },
     {
         id:2,
-        name:'Fire'
+        name:'Fire',
+        logo:'https://app.elemon.io/assets/images/element/Fire.png'
     },
     {
         id:3,
-        name:'Water'
+        name:'Water',
+        logo:'https://app.elemon.io/assets/images/element/Water.png'
     },
     {
         id:4,
-        name:'Electric'
+        name:'Electric',
+        logo:'https://app.elemon.io/assets/images/element/Electric.png'
     },
     {
         id:5,
-        name:'Grass'
+        name:'Grass',
+        logo:'https://app.elemon.io/assets/images/element/Grass.png'
     },
     {
         id:6,
-        name:'Ice'
+        name:'Ice',
+        logo:'https://app.elemon.io/assets/images/element/Ice.png'
     },
     {
         id:7,
-        name:'Fight'
+        name:'Fight',
+        logo:'https://app.elemon.io/assets/images/element/Fight.png'
     },
     {
         id:8,
-        name:'Poison'
+        name:'Poison',
+        logo:'https://app.elemon.io/assets/images/element/Poison.png'
     },
     {
         id:9,
-        name:'Ground'
+        name:'Ground',
+        logo:'https://app.elemon.io/assets/images/element/Ground.png'
     },
     {
         id:10,
-        name:'Fly'
+        name:'Fly',
+        logo:'https://app.elemon.io/assets/images/element/Fly.png'
     },
     {
         id:11,
-        name:'Psychic'
+        name:'Psychic',
+        logo:'https://app.elemon.io/assets/images/element/Psychic.png'
     },
     {
         id:12,
-        name:'Bug'
+        name:'Bug',
+        logo:'https://app.elemon.io/assets/images/element/Bug.png'
     },
     {
         id:13,
-        name:'Rock'
+        name:'Rock',
+        logo:'https://app.elemon.io/assets/images/element/Rock.png'
     },
     {
         id:14,
-        name:'Ghost'
+        name:'Ghost',
+        logo:'https://app.elemon.io/assets/images/element/Ghost.png'
     },
     {
         id:15,
-        name:'Dragon'
+        name:'Dragon',
+        logo:'https://app.elemon.io/assets/images/element/Dragon.png'
     },
     {
         id:16,
-        name:'Dark'
+        name:'Dark',
+        logo:'https://app.elemon.io/assets/images/element/RDarkock.png'
     },
     {
         id:17,
-        name:'Steel'
+        name:'Steel',
+        logo:'https://app.elemon.io/assets/images/element/Steel.png'
     },
     {
         id:18,
-        name:'Fairy'
+        name:'Fairy',
+        logo:'https://app.elemon.io/assets/images/element/Fairy.png'
     },
 ]
 export const Rare = [
@@ -197,42 +219,50 @@ export const Aura = [
     {
         id:1,
         name:'White',
-        rate:'0.66'
+        rate:'0.66',
+        logo:'https://app.elemon.io/assets/images/aura/quality_1.png'
     },
     {
         id:2,
         name:'Green',
-        rate:'1'
+        rate:'1',
+        logo:'https://app.elemon.io/assets/images/aura/quality_2.png'
     },
     {
         id:3,
         name:'Blue',
-        rate:'1.66'
+        rate:'1.66',
+        logo:'https://app.elemon.io/assets/images/aura/quality_3.png'
     },
     {
         id:4,
         name:'Purple',
-        rate:'2.66'
+        rate:'2.66',
+        logo:'https://app.elemon.io/assets/images/aura/quality_4.png'
     },
     {
         id:5,
         name:'Orange',
-        rate:'4'
+        rate:'4',
+        logo:'https://app.elemon.io/assets/images/aura/quality_5.png'
     },
     {
         id:6,
         name:'Red',
-        rate:'4'
+        rate:'4',
+        logo:'https://app.elemon.io/assets/images/aura/quality_6.png'
     },
     {
         id:7,
         name:'Rainbow',
-        rate:'4'
+        rate:'4',
+        logo:'https://app.elemon.io/assets/images/aura/quality_7.png'
     },
     {
         id:8,
         name:'Gold',
-        rate:'4'
+        rate:'4',
+        logo:'https://app.elemon.io/assets/images/aura/quality_8.png'
     },
 ]
 export const LevelStats = {
@@ -4483,5 +4513,17 @@ export const BodyQuality=[
         name:'Mystical'
         ,point:190
 
+    },
+]
+export const Pure = [
+    {
+        id:0,
+        name:'Pure',
+        logo:'https://app.elemon.io/assets/images/purity_Pure.png'
+    },
+    {
+        id:0,
+        name:'Hybrid',
+        logo:'https://app.elemon.io/assets/images/purity_Hybrid.png'
     },
 ]
