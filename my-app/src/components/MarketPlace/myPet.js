@@ -14,7 +14,7 @@ export class myPet{
         this.purity = props.purity?  Pure[0].name:Pure[1].name
         this.purityLogo = props.purity? Pure[0].logo:Pure[1].logo
         this.quality = props.quality
-        this.qualityLogo = Aura[props.quality-1].logo
+        this.qualityLogo = props.quality === undefined? Aura.filter(item =>item.id ===props.quality)[0].logo:""
         this.rarity = props.rarity
         this.rarityLogo = this.getRareLogo(props.rarity)
         this.name = this.getName(props.baseCardId)
@@ -23,6 +23,7 @@ export class myPet{
         this.point = 0;
         this.star = 0;
         this.link = `https://app.elemon.io/elemon/${props.tokenId}`
+        this.skills=[]
     }
 
     getPrice(lastPrice){
@@ -80,12 +81,16 @@ export class myPet{
         this.star = star
         return
     }
-
+    updateSkills(skills){
+        this.skills=skills
+        return
+    }
     UpdateStats(props){
-        this.updateLevel(props.level)
-        this.updateBody(props.points)
-        this.updatePoint(props.point)
-        this.updateStar(props.star)
+      if(props.level)  this.updateLevel(props.level)
+      if(props.points)   this.updateBody(props.points)
+      if(props.point)  this.updatePoint(props.point)
+      if(props.star)  this.updateStar(props.star)
+      if(props.skills) this.updateSkills(props.skills)
     }
     
 }

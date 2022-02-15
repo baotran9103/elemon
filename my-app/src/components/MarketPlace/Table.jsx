@@ -18,13 +18,13 @@ function MyTable() {
   const [data, setdata] = myContext.data
   const [isLoaded, setisLoaded] = myContext.isLoaded
   const [pageSize, setPageSize] = useState(20);
-
+  console.log(data)
  
   return (
     <div>
       <div style={{ height: 800, width: '100%' }}>
         {
-          data?.length && isLoaded && <DataGrid
+          data?.length && isLoaded ? <DataGrid
           rows={data}
           columns={columns}
           pageSize={pageSize}
@@ -32,7 +32,7 @@ function MyTable() {
           rowsPerPageOptions={[20,30,40,50]}
           pagination
           // checkboxSelection
-        />
+        />:""
         }
      
     </div>
