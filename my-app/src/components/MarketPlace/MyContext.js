@@ -12,59 +12,74 @@ const url =
 const MarketContextProvider = ({ children }) => {
   const [data, setdata] = useState([]);
   const [isLoaded, setisLoaded] = useState(false);
-  const [elemonFilter, setelemonFilter] = useState(-1)
-  const [classFilter, setclassFilter] = useState(-1)
-  const [rareFilter, setrareFilter] = useState(-1)
-  const [auraFilter, setauraFilter] = useState(-1)
-  const [pureFilter, setpureFilter] = useState(-1)
+  const [elemonFilter, setelemonFilter] = useState([])
+  const [classFilter, setclassFilter] = useState([])
+  const [rareFilter, setrareFilter] = useState([])
+  const [auraFilter, setauraFilter] = useState([])
+  const [pureFilter, setpureFilter] = useState([])
   const [powFilter, setpowFilter] = useState([0,10000000])
-  const [body1, setbody1] = useState(-1)
-  const [body2, setbody2] = useState(-1)
-  const [body3, setbody3] = useState(-1)
-  const [body4, setbody4] = useState(-1)
-  const [body5, setbody5] = useState(-1)
-  const [body6, setbody6] = useState(-1)
+  const [body1, setbody1] = useState([])
+  const [body2, setbody2] = useState([])
+  const [body3, setbody3] = useState([])
+  const [body4, setbody4] = useState([])
+  const [body5, setbody5] = useState([])
+  const [body6, setbody6] = useState([])
+  const [refresh, setrefresh] = useState(false)
+  const clearAll = ()=>{
+    setelemonFilter([])
+    setclassFilter([])
+    setrareFilter([])
+    setauraFilter([])
+    setpureFilter([])
+    setpowFilter([0,10000000])
+    setbody1([])
+    setbody2([])
+    setbody3([])
+    setbody4([])
+    setbody5([])
+    setbody6([])
+  }
   // const filters = [elemonFilter,classFilter,rareFilter,auraFilter,pureFilter]
 
-  const condition = elemonFilter!==-1 || classFilter !== -1 || rareFilter !== -1|| auraFilter !== -1|| pureFilter !== -1
+  const condition = elemonFilter!==[] || classFilter !== [] || rareFilter !== []|| auraFilter !== []|| pureFilter !== []
 
   const mydata = useMemo(() => {
  
    
       let t = data.filter(item=>  item.point != 0 ? powFilter[0]<=item.point :true)
 
-    if(elemonFilter >=0 ){
-      t = t.filter(item=>item.pet === elemonFilter)
+    if(elemonFilter.length  ){
+      t = t.filter(item=>elemonFilter.includes(item.pet))
     }
-    if(pureFilter >=0 ){
-      t = t.filter(item=>item.pure === pureFilter)
+    if(pureFilter.length  ){
+      t = t.filter(item=> pureFilter.includes(item.pure))
     }
-    if(classFilter >=0 ){
-      t = t.filter(item=>item.classno === classFilter)
+    if(classFilter.length ){
+      t = t.filter(item=> classFilter.includes(item.classno))
     }
-    if(auraFilter >=0 ){
-      t = t.filter(item=>item.quality === auraFilter)
+    if(auraFilter.length  ){
+      t = t.filter(item=> auraFilter.includes(item.quality))
     }
-    if(rareFilter >=0 ){
-      t = t.filter(item=>item.rarity === rareFilter)
+    if(rareFilter.length  ){
+      t = t.filter(item=> rareFilter.includes(item.rarity))
     }
-    if(body1 >=0 ){
-      t = t.filter(item=>item.bodyPart1 === body1)
+    if(body1.length){
+      t = t.filter(item=>  body1.includes(item.bodyPart1))
     }
-    if(body2 >=0 ){
-      t = t.filter(item=>item.bodyPart2 === body2)
+    if(body2.length ){
+      t = t.filter(item=> body2.includes(item.bodyPart2 ))
     }
-    if(body3 >=0 ){
-      t = t.filter(item=>item.bodyPart3=== body3)
+    if(body3.length){
+      t = t.filter(item=> body3.includes(item.bodyPart3))
     }
-    if(body4 >=0 ){
-      t = t.filter(item=>item.bodyPart4 === body4)
+    if(body4.length){
+      t = t.filter(item=>  body4.includes(item.bodyPart4))
     }
-    if(body5 >=0 ){
-      t = t.filter(item=>item.bodyPart5 === body5)
+    if(body5.length){
+      t = t.filter(item=>  body5.includes(item.bodyPart5))
     }
-    if(body6 >=0 ){
-      t = t.filter(item=>item.bodyPart6 === body6)
+    if(body6.length ){
+      t = t.filter(item=> body6.includes(item.bodyPart6))
     }
       
     
@@ -88,7 +103,8 @@ const MarketContextProvider = ({ children }) => {
     body4: [body4, setbody4] ,
     body5: [body5, setbody5] ,
     body6: [body6, setbody6] ,
-   
+    clearAll:clearAll,
+    refresh:[refresh, setrefresh] 
   };
   useEffect(() => {
     axios.get(url).then((result) => {
@@ -119,7 +135,8 @@ const MarketContextProvider = ({ children }) => {
           });
       }
     }).catch(err=>console.log(err.message));
-  }, []);
+  }, [refresh]);
+  
   return (
     <MarketContext.Provider value={value}>{children}</MarketContext.Provider>
   );

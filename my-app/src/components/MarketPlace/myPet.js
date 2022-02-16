@@ -210,11 +210,11 @@ export class myPet{
        for(let i =0;i<9;i++){
            this.body[i] = Math.floor(this.body[i]+0.5)
        }
-       this.HP = this.body[1]
-       this.pAtk = this.body[2]
-       this.mAtk = this.body[3]
-       this.pDef = this.body[4]
-       this.mDef = this.body[5]
-       this.spd = this.body[6]
+       this.HP = this.body[0]
+       this.pAtk = this.body[1]
+       this.mAtk = this.body[2]
+       this.pDef = this.body[3]
+       this.mDef = this.body[4]
+       this.spd = this.body[5]
       }
 }

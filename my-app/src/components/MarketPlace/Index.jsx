@@ -4,7 +4,7 @@ import TableHeader from './TableHeader'
 import MarketContextProvider from './MyContext'
 function Index() {
   return (
-    <div>
+    <div style={{margin:'5rem 0'}}>
    
         <MarketContextProvider>
           <TableHeader/>

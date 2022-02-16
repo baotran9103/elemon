@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useMemo, useContext } from "react";
+import React, {  useContext } from "react";
 import { MarketContext } from "./MyContext";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import InputLabel from "@mui/material/InputLabel";
+import CustomSelect from "./CustomSelect";
 import TextField from '@mui/material/TextField';
 import * as info from "../utils/Data";
 import Slider from "@mui/material/Slider";
+import { Button } from "@mui/material";
 
 function TableHeader() {
 
@@ -23,7 +22,9 @@ function TableHeader() {
   const [body4, setbody4] = myContext.body4;
   const [body5, setbody5] = myContext.body5;
   const [body6, setbody6] = myContext.body6;
-  
+  const [refresh, setrefresh] = myContext.refresh
+
+  const clearAll = myContext.clearAll
   const Selects = [
     {
       value: elemonFilter,
@@ -201,46 +202,11 @@ function TableHeader() {
           disableSwap
         />
       </div>
+      <Button onClick={clearAll} variant='outlined'> Clear All </Button>
+      <Button onClick={()=>setrefresh(!refresh)} variant='outlined'> Load Data </Button>
     </div>
   );
 }
 
 export default TableHeader;
 
-const CustomSelect = ({
-  value,
-  setvalue,
-  label,
-  type = "number",
-  items = [],
-  itemName = "",
-  itemID = "",
-}) => {
-  const handleChange = (event) => {
-    setvalue(event.target.value);
-  };
-
-  return (
-    <div>
-      <InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
-      <Select
-        labelId="demo-simple-select-standard-label"
-        id="demo-simple-select-standard"
-        value={value}
-        onChange={handleChange}
-        label={label}
-        type={type}
-        style={{ minWidth: "120px" }}
-      >
-        <MenuItem value={-1}>
-          <em>None</em>
-        </MenuItem>
-        {items.map((item, idx) => (
-          <MenuItem value={item[itemID]} key={`${idx}_${item[itemName]}`}>
-            {item[itemName]}
-          </MenuItem>
-        ))}
-      </Select>
-    </div>
-  );
-};
