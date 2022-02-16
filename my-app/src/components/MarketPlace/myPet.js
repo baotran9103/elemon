@@ -1,8 +1,13 @@
-import {Aura,Rare,Elemons,ElClass,Pure} from '../utils/Data.js'
+import {Aura,Rare,Elemons,ElClass,Pure,BodyQuality,LevelStats} from '../utils/Data.js'
+import {BaseCard}from "../utils/BaseCard";
 
 export class myPet{
     constructor(props){
         this.id = props.tokenId
+        this.pet = props.baseCardId
+        this.classno = props.class
+        this.pure = props.purity
+        this.rare = props.rarity
         this.price = this.getPrice(props.lastPrice)
         this.bodyPart1 = props.bodyPart1
         this.bodyPart2 = props.bodyPart2
@@ -11,8 +16,8 @@ export class myPet{
         this.bodyPart5 = props.bodyPart5
         this.class = this.getClass(props.class)
         this.bodyPart6 = props.bodyPart6
-        this.purity = props.purity?  Pure[0].name:Pure[1].name
-        this.purityLogo = props.purity? Pure[0].logo:Pure[1].logo
+        this.purity = props.purity === 0 ?  Pure[0].name : Pure[1].name
+        this.purityLogo = props.purity === 0 ?  Pure[0].logo : Pure[1].logo
         this.quality = props.quality
         this.qualityLogo = props.quality === undefined? Aura.filter(item =>item.id ===props.quality)[0].logo:""
         this.rarity = props.rarity
@@ -24,6 +29,17 @@ export class myPet{
         this.star = 0;
         this.link = `https://app.elemon.io/elemon/${props.tokenId}`
         this.skills=[]
+        this.rate = this.point >0 ? this.price/this.point:-1;
+        this.rareFactor = this.getRareFactor()
+        this.elemonInfo = this.getElemon()
+        this.body=[]
+        this.TotalSkill = this.getSkills();
+        this.HP = 0
+        this.pAtk = 0
+        this.mAtk = 0
+        this.pDef = 0
+        this.mDef = 0
+        this.spd = 0
     }
 
     getPrice(lastPrice){
@@ -85,12 +101,120 @@ export class myPet{
         this.skills=skills
         return
     }
-    UpdateStats(props){
-      if(props.level)  this.updateLevel(props.level)
-      if(props.points)   this.updateBody(props.points)
-      if(props.point)  this.updatePoint(props.point)
-      if(props.star)  this.updateStar(props.star)
-      if(props.skills) this.updateSkills(props.skills)
+
+    getRareFactor(){
+        if(!this.rare) return 0;
+        
+        if(typeof parseInt(this.rare) ==='number'){
+            return Rare[this.rare-1].rate
+        }
+        return 0;
     }
-    
+    getSkills(skills){
+
+        let sum = 0
+        let c  = 5 
+        
+        c += this.skills.length
+        for(let item of this.skills){
+            sum+= item
+        }
+        // c += this.skill1> 0 
+        // c += this.skill2> 0 
+        // c += this.skill3> 0 
+        // c += this.skill4> 0 
+        // console.log(c,sum)
+        return sum*c;
+    }
+    getElemon(){
+        if(this.pet){
+            return BaseCard[this.pet]
+        }
+        return []
+    }
+    getStartIndex(initial){
+        let r = 9;
+        let i = initial*r;
+        let a = i;
+        // let o = i+r;
+        return a>=162?0:a;
+    }
+    runLoop(items,input){
+        let c = 0;
+        let start = this.getStartIndex(input)
+        for(let i =0;i<9;i++){
+            c+= items[start+i]
+            this.body[i] = this.body[i] +items[start+i] || items[start+i]
+        }
+        return c
+        
+    }
+    getClassPoints(){
+        var temp_class = this.classno-1;
+        var items = this.elemonInfo.initPoint
+        if(!items) return 0   
+
+        return this.runLoop(items,temp_class)
+       
+    }
+    getauraPoints(){
+        var temp_aura = this.quality-1;              
+        var items = this.elemonInfo.qualityPoint         
+        if(!items) return 0   
+        
+        return this.runLoop(items,temp_aura)
+    }
+    getstarPoints(){
+        var temp_star = this.star;       
+      
+        var items = this.elemonInfo.starPoint
+        if(!items) return 0
+        return this.runLoop(items,temp_star)
+    }
+    getBodyPartPoints(){
+        this.body[0] = this.body[0]+ BodyQuality[this.bodyPart1-1].point   
+        this.body[1] = this.body[1]+ BodyQuality[this.bodyPart2-1].point   
+        this.body[2] = this.body[2]+ BodyQuality[this.bodyPart3-1].point   
+        this.body[3] = this.body[3]+ BodyQuality[this.bodyPart4-1].point  
+        this.body[4] = this.body[4]+ BodyQuality[this.bodyPart5-1].point   
+        this.body[5] = this.body[5]+ BodyQuality[this.bodyPart6-1].point  
+      
+        
+        
+    }
+    getNumPoints(){
+        var temp_level = this.elemonInfo.levelType;       
+        let temp_num = temp_level -1
+        var numPoints = LevelStats[this.level].pointNumber
+        var pointPercent  = LevelStats[this.level].pointPercent
+        
+        let start = this.getStartIndex(temp_num)
+        if(!numPoints || !pointPercent) return 
+        for(let i =0;i<9;i++){
+            this.body[i] = this.body[i]*(1+pointPercent[i]) + numPoints[start+i]
+        }
+        
+    }
+    UpdateStats(data){
+        if(data.level)  this.updateLevel(data.level)
+        if(data.points)   this.updateBody(data.points)
+        if(data.point)  this.updatePoint(data.point)
+        if(data.star)  this.updateStar(data.star)
+        if(data.skills) this.updateSkills(data.skills)
+       this.rate =  this.point >0 ? Math.floor(this.price/this.point * 1000000):-1
+       this.getClassPoints()
+       this.getauraPoints()
+       this.getstarPoints()
+       this.getBodyPartPoints()
+       this.getNumPoints()
+       for(let i =0;i<9;i++){
+           this.body[i] = Math.floor(this.body[i]+0.5)
+       }
+       this.HP = this.body[1]
+       this.pAtk = this.body[2]
+       this.mAtk = this.body[3]
+       this.pDef = this.body[4]
+       this.mDef = this.body[5]
+       this.spd = this.body[6]
+      }
 }

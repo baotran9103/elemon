@@ -2,27 +2,29 @@ import Avatar from "@mui/material/Avatar";
 import { Rare,Aura } from "../utils/Data";
 import { Button } from "@mui/material";
 export const columns = [
-  { field: "id", headerName: "id", width: 130 },
-  { field: "name", headerName: "Elemon", width: 130 },
+  { field: "id", headerName: "id", width: 90 },
+  { field: "name", headerName: "Elemon", width: 110 },
   {
     field: "petAvatar",
     headerName: "Image",
-    width: 130,
+    width: 80,
     sortable: false,
     renderCell: (params) => (
       <img
-        style={{ width: "100px", height: "100%", objectFit: "contain" }}
+        style={{ width: "50px", height: "100%", objectFit: "contain" }}
         src={params.value}
         alt="logo"
       />
     ),
   },
-  { field: "point", headerName: "Power", width: 150, type: "number" },
-  { field: "price", headerName: "Price", width: 130, type: "number" },
+  { field: "rate", headerName: "Rate", width: 100, type: "number" },
+  { field: "point", headerName: "Power", width: 100, type: "number" },
+  { field: "price", headerName: "Price", width: 100, type: "number" },
   {
     field: "class",
     headerName: "Class",
     width: 130,
+    type:'number',
     renderCell: (params) => (
       <LogoDiv
         info={params.value}
@@ -35,9 +37,10 @@ export const columns = [
   {
     field: "quality",
     headerName: "Aura",
+    type:"number",
     width: 130,
     renderCell: (params) => (
-     <span>{Aura[params.value-1].name}</span>
+     <span>{Aura.filter(item=>item.id=== params.value)[0]?.name}</span>
     ),
   },
   {
@@ -56,12 +59,14 @@ export const columns = [
     ),
     width: 90,
   },
-  { field: "bodyPart1", headerName: "HP", width: 130, type: "number" },
-  { field: "bodyPart2", headerName: "P.Attack", width: 130, type: "number" },
-  { field: "bodyPart3", headerName: "M.Attack", width: 130, type: "number" },
-  { field: "bodyPart4", headerName: "P.Def", width: 130, type: "number" },
-  { field: "bodyPart5", headerName: "M.Def", width: 130, type: "number" },
-  { field: "bodyPart6", headerName: "Speed", width: 130, type: "number" },
+  { field: "level", headerName: "Level", width: 80, type: "number" },
+
+  { field: "HP", headerName: "HP", width: 130, type: "number" },
+  { field: "pAtk", headerName: "P.Attack", width: 130, type: "number" },
+  { field: "mAtk", headerName: "M.Attack", width: 130, type: "number" },
+  { field: "pDef", headerName: "P.Def", width: 130, type: "number" },
+  { field: "mDef", headerName: "M.Def", width: 130, type: "number" },
+  { field: "spd", headerName: "Speed", width: 130, type: "number" },
   {
     field: "link",
     headerName: "Action",
@@ -80,12 +85,13 @@ export const columns = [
 ];
 const LogoDiv = ({ info, getFunction, width = "50px", text = "" }) => (
   <div style={{ alignItems: "center", display: "flex", gap: "0 4px" }}>
+  
+    <span>{text}</span>
     <img
       style={{ width: width, height: "100%", objectFit: "contain" }}
       src={getFunction(info)}
       alt="logo"
     />
-    <span>{text}</span>
   </div>
 );
 function getRareLogo(rarity) {

@@ -66,7 +66,7 @@ function Index() {
           <div style={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
             <IconButton onClick={() => {}} sx={{ p: 0, m: 2 }}>
               <a href="https://t.me/elemonmoneyprivate" target="_blank" style={{ color: "#fff", textDecoration: "none" }}>
-                <Avatar alt="EMP" src="/EMP.jpg" />
+                <Avatar alt="EMP" src="/emp.jpg" />
               </a>
             </IconButton>
 

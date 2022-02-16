@@ -264,6 +264,12 @@ export const Aura = [
         rate:'4',
         logo:'https://app.elemon.io/assets/images/aura/quality_8.png'
     },
+    {
+        id:9,
+        name:'CS',
+        rate:'4',
+        logo:'https://app.elemon.io/assets/images/aura/quality_8.png'
+    },
 ]
 export const LevelStats = {
     "1": {
@@ -4518,12 +4524,13 @@ export const BodyQuality=[
 export const Pure = [
     {
         id:0,
-        name:'Pure',
-        logo:'https://app.elemon.io/assets/images/purity_Pure.png'
-    },
-    {
-        id:0,
         name:'Hybrid',
         logo:'https://app.elemon.io/assets/images/purity_Hybrid.png'
+    },
+    {
+        id:1,
+      
+        name:'Pure',
+        logo:'https://app.elemon.io/assets/images/purity_Pure.png'
     },
 ]
