@@ -1,24 +1,17 @@
-import React,{useState,useEffect,useMemo,useContext} from 'react'
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React,{useState,useContext} from 'react'
+
 import { DataGrid } from '@mui/x-data-grid';
 
 import {columns} from './Utils'
 import { MarketContext } from './MyContext';
-
+import Pagination from '@mui/material/Pagination';
 function MyTable() {
 
 
   const myContext = useContext(MarketContext)
-  const [data, setdata] = myContext.data
+  const data = myContext.data
   const [isLoaded, setisLoaded] = myContext.isLoaded
   const [pageSize, setPageSize] = useState(20);
-  console.log(data)
  
   return (
     <div>
@@ -30,8 +23,9 @@ function MyTable() {
           pageSize={pageSize}
           onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
           rowsPerPageOptions={[20,30,40,50]}
-          pagination
+          Pagination ={<Pagination count={10} color="primary" />}
           // checkboxSelection
+          autoPageSize
         />:""
         }
      
