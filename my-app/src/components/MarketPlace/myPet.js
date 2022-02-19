@@ -3,6 +3,7 @@ import {BaseCard}from "../utils/BaseCard";
 
 export class myPet{
     constructor(props){
+        if(!props) return
         this.id = props.tokenId
         this.pet = props.baseCardId
         this.classno = props.class
@@ -14,15 +15,15 @@ export class myPet{
         this.bodyPart3 = props.bodyPart3
         this.bodyPart4 = props.bodyPart4
         this.bodyPart5 = props.bodyPart5
-        this.class = this.getClass(props.class)
+        this.class =props.class ?  this.getClass(props.class) :""
         this.bodyPart6 = props.bodyPart6
         this.purity = props.purity === 0 ?  Pure[0].name : Pure[1].name
         this.purityLogo = props.purity === 0 ?  Pure[0].logo : Pure[1].logo
         this.quality = props.quality
         this.qualityLogo = props.quality === undefined? Aura.filter(item =>item.id ===props.quality)[0].logo:""
         this.rarity = props.rarity
-        this.rarityLogo = this.getRareLogo(props.rarity)
-        this.name = this.getName(props.baseCardId)
+        this.rarityLogo = props.rarity ? this.getRareLogo(props.rarity) :""
+        this.name = props.baseCardId? this.getName(props.baseCardId):""
         this.petAvatar = this.getAvatar(props.baseCardId)
         this.level = 0;
         this.point = 0;
@@ -40,6 +41,16 @@ export class myPet{
         this.pDef = 0
         this.mDef = 0
         this.spd = 0
+        this.bodyPart1Point = this.getBodyQualityPoint(props.bodyPart1)
+        this.bodyPart2Point = this.getBodyQualityPoint(props.bodyPart2)
+        this.bodyPart3Point = this.getBodyQualityPoint(props.bodyPart3)
+        this.bodyPart4Point = this.getBodyQualityPoint(props.bodyPart4)
+        this.bodyPart5Point = this.getBodyQualityPoint(props.bodyPart5)
+        this.bodyPart6Point = this.getBodyQualityPoint(props.bodyPart6)
+    }
+
+    getBodyQualityPoint(id){
+        return BodyQuality[id-1].point
     }
 
     getPrice(lastPrice){
@@ -172,6 +183,7 @@ export class myPet{
         return this.runLoop(items,temp_star)
     }
     getBodyPartPoints(){
+        
         this.body[0] = this.body[0]+ BodyQuality[this.bodyPart1-1].point   
         this.body[1] = this.body[1]+ BodyQuality[this.bodyPart2-1].point   
         this.body[2] = this.body[2]+ BodyQuality[this.bodyPart3-1].point   

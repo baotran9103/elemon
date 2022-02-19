@@ -25,7 +25,7 @@ export const columns = [
       />
     ),
   },
-  { field: "rate", headerName: "Rate", width: 100, type: "number" },
+  { field: "rate", headerName: "Rate",description:"Price/power", width: 100, type: "number" },
   { field: "point", headerName: "Power", width: 100, type: "number" },
   { field: "price", headerName: "Price", width: 100, type: "number",
   renderCell:(params)=>(<div style={{wordSpacing:'8px'}}>{formatter.format(params.value)}</div>)
@@ -80,12 +80,18 @@ export const columns = [
     width: 90,
   },
   { field: "level", headerName: "Level", width: 80, type: "number" },
-
+  { field: "star", headerName: "Star", width: 80, type: "number" },
+  { field: "bodyPart1Point", headerName: "bodyPart1Point",description:"HP", width: 100, type: "number" ,headerClassName: 'super-app-theme--body'  },
+  { field: "bodyPart2Point", headerName: "bodyPart2",description:"Physical Attack", width: 100, type: "number",headerClassName: 'super-app-theme--body' },
+  { field: "bodyPart3Point", headerName: "bodyPart3",description:"Magic Attack", width: 100, type: "number" ,headerClassName: 'super-app-theme--body'},
+  { field: "bodyPart4Point", headerName: "bodyPart4",description:"Physical Defend", width: 100, type: "number",headerClassName: 'super-app-theme--body' },
+  { field: "bodyPart5Point", headerName: "bodyPart5",description:"Magical Defend", width: 100, type: "number" ,headerClassName: 'super-app-theme--body'},
+  { field: "bodyPart6Point", headerName: "bodyPart6",description:"Speed", width: 100, type: "number",headerClassName: 'super-app-theme--body' },
   { field: "HP", headerName: "HP", width: 100, type: "number" },
-  { field: "pAtk", headerName: "P.Attack", width: 100, type: "number" },
-  { field: "mAtk", headerName: "M.Attack", width: 100, type: "number" },
-  { field: "pDef", headerName: "P.Def", width: 100, type: "number" },
-  { field: "mDef", headerName: "M.Def", width: 100, type: "number" },
+  { field: "pAtk", headerName: "PAttack", width: 100, type: "number" },
+  { field: "mAtk", headerName: "MAttack", width: 100, type: "number" },
+  { field: "pDef", headerName: "PDef", width: 100, type: "number" },
+  { field: "mDef", headerName: "MDef", width: 100, type: "number" },
   { field: "spd", headerName: "Speed", width: 100, type: "number" },
   {
     field: "link",
@@ -128,3 +134,10 @@ const getClassLogo = (info) => {
 const getAuraLogo = (info) => {
   return `/images/aura/quality_${info}.png`;
 };
+
+const MyBodyHeader = ({param}) =>    (
+  <strong>
+  1
+    {param}
+  </strong>
+)
