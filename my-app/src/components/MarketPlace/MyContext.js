@@ -127,6 +127,7 @@ const MarketContextProvider = ({ children }) => {
           if (!conditionCheck(item)) {
             console.log(idx1, "not valid");
           } else {
+            console.log(item)
             t.push(
               new myPet({
                 ...item,

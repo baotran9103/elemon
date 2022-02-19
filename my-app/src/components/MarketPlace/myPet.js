@@ -50,6 +50,7 @@ export class myPet{
     }
 
     getBodyQualityPoint(id){
+        if(!id) return 0
         return BodyQuality[id-1].point
     }
 
