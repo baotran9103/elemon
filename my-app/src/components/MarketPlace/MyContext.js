@@ -120,7 +120,7 @@ const MarketContextProvider = ({ children }) => {
     return true;
   };
   useEffect(() => {
-    axios.get(url).then((result) => {
+    axios.get(url).then(async (result) => {
       if (result?.data.data) {
         let t = [];
         result.data.data.forEach((item, idx1) => {
@@ -140,17 +140,41 @@ const MarketContextProvider = ({ children }) => {
         setisLoaded(true);
         const infourl =
           "https://us-central1-nice-fx-286508.cloudfunctions.net/elemons";
-        axios.get(infourl).then((result2) => {
+
+        try{
+          let result2 = await axios.get(infourl)
+       
           if (result2?.data) {
-            t.forEach((pet) => {
-              let hash = result2.data;
-              if (hash[pet.id]) {
-                pet.UpdateStats(hash[pet.id]);
-              }
-            });
-            setdata([...t]);
+              t.forEach((pet) => {
+                let hash = result2.data;
+                if (hash[pet.id]) {
+                  pet.UpdateStats(hash[pet.id]);
+                }
+              });
+              setdata([...t]);
+  
           }
-        });
+          let temp = []
+          t.forEach(pet=>{
+            if(pet.point ===0) temp.push(pet)
+            
+          })
+          // console.log(temp)
+
+          temp.forEach( async (pet)=>{
+            let url =            "https://app.elemon.io/elemon/getElemonInfo?tokenId=";
+            let data = await axios.get(url+pet.id)
+            if(data?.data) pet.updateSecond(data.data.data[0]);
+          })
+          setdata([...t]);
+
+
+        }catch(err){
+          console.log(err.message)
+        }
+        
+
+        
       }
     });
     // .catch(err=>console.log(err.message));
