@@ -68,7 +68,7 @@ export const columns = [
     headerName: "rarity",
     width: 130,
     renderCell: (params) => (
-      <LogoDiv info={Rare[params.value-1].name} getFunction={getRareLogo} />
+      <LogoDiv info={Rare[params.value-1]?.name?Rare[params.value-1].name:""} getFunction={getRareLogo} />
     ),
   },
   {

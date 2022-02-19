@@ -208,6 +208,15 @@ export class myPet{
         }
         
     }
+    updateSecond(data){
+        if(data.level)  this.updateLevel(data.level)
+        if(data.points)   this.updateBody(data.points)
+        if(data.point)  this.updatePoint(data.point)
+        if(data.star)  this.updateStar(data.star)
+        if(data.skills) this.updateSkills(data.skills)
+       this.rate =  this.point >0 ? Math.floor(this.price/this.point * 1000000):-1
+
+    }
     UpdateStats(data){
         if(data.level)  this.updateLevel(data.level)
         if(data.points)   this.updateBody(data.points)
