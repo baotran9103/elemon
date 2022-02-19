@@ -26,7 +26,6 @@ const CustomSelect = ({
     itemName = "",
     itemID = "",
   }) => {
-   
     // const handleChange = (event) => {
     //   setvalue(event.target.value);
     // };
@@ -60,7 +59,7 @@ const CustomSelect = ({
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5,overflow:'auto' ,maxHeight:80}}>
               {selected.map((value) => (
-                <Chip variant="outlined" key={value} label={items[value-1][itemName]} />
+                <Chip variant="outlined" key={value} label={items.filter((i)=>i[itemID]===value)[0][itemName]} />
               ))}
             </Box>
           )}

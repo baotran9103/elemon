@@ -12,7 +12,14 @@ function MyTable() {
   const data = myContext.data
   const [isLoaded, setisLoaded] = myContext.isLoaded
   const [pageSize, setPageSize] = useState(20);
- 
+  const [columnVisibilityModel, setColumnVisibilityModel] = React.useState(  { "HP": false,
+  "pAtk": false,
+  "mAtk": false,
+"pDef": false,
+  "mDef": false,
+  "spd": false,
+});
+  
   return (
     <div>
       <div style={{ height: 800, width: '100%' }}>
@@ -26,6 +33,14 @@ function MyTable() {
           Pagination ={<Pagination count={10} color="primary" />}
           // checkboxSelection
           autoPageSize
+          density="standard"
+              columnVisibilityModel= {columnVisibilityModel}
+              onColumnVisibilityModelChange={(newModel) =>
+                setColumnVisibilityModel(newModel)
+              }
+            
+         
+         
         />:""
         }
      
