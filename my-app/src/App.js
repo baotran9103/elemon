@@ -4,7 +4,6 @@ import SpeedDial from "./components/SpeedDial";
 import MyRoutes from "./Routes";
 import Navbar from "./components/Navbar/Index";
 function App() {
-  const [open, setopen] = useState(false)
   return (
     <div className="App">
     

@@ -55,6 +55,22 @@ export default function ElemonContextProvider({children}){
         setbody5(info.bodyPart[4].quality)
         setbody6(info.bodyPart[5].quality)
     }
+    function updateNewData(data){
+        if(data.length===0) return;
+        let info = data[0]
+        setlevel(info.level)
+        if(info?.skill1) setskill1(info.skill1)
+        if(info?.skill2) setskill2(info.skill2)
+        if(info?.skill3) setskill3(info.skill3)
+        if(info?.skill4) setskill4(info.skill4)
+        setstar(info.star)
+        setbody1(info.body1)
+        setbody2(info.body2)
+        setbody3(info.body3)
+        setbody4(info.body4)
+        setbody5(info.body5)
+        setbody6(info.body6)
+    }
     const updateMore = (data)=>{
         console.log(data)
         if(data.length===0) return;
@@ -84,7 +100,8 @@ export default function ElemonContextProvider({children}){
         mypet:[mypet, setmypet],
         data:data,
         updateData:updateData,
-        updateMore:updateMore
+        updateMore:updateMore,
+        updateNewData:updateNewData
     }
 
 
