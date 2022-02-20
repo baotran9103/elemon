@@ -23,7 +23,7 @@ function Pets() {
       </div>
       <div  style={{display:'flex',padding:'1rem',flexWrap:'wrap',gap:'1rem'}}>
       {
-        pets?.map((pet,id)=>  <Pet key = {`pet_${id}`} pet={pet} open={open} setopen={setopen} idx={id} />)
+        pets?.map((pet,id)=>  <Pet key = {`pet_${id}`} pet={pet} open={open} setopen={setopen} idx={id} pets={pets} setpets={setpets}/>)
       }
       </div>
       {

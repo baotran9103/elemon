@@ -8,12 +8,17 @@ import CardMedia from '@mui/material/CardMedia';
 import {PetsContext} from './PetsContext'
 
 import * as data from '../utils/Data'
-function Pet({pet,open,setopen,idx}) {
+function Pet({pet,open,setopen,idx,pets,setpets}) {
     const myContext = useContext(PetsContext)
     const[editingId, seteditingId]   = myContext.editingId
     const editHandler = ()=>{
         setopen(true)
         seteditingId(idx)
+    }
+    const deleteHandler =()=>{
+      let temp = pets
+      pets.splice(idx, 1)
+      setpets([...temp])
     }
   return (
     <div>
@@ -58,6 +63,7 @@ function Pet({pet,open,setopen,idx}) {
         </CardContent>
         <CardActions>
           <Button size="small" onClick={editHandler}>Edit Information</Button>
+          <Button size="small" onClick={deleteHandler}>Delete Pet</Button>
         </CardActions>
       </Card>
     </div>
