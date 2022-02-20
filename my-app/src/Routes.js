@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ElemonContextProvider from "./components/ElemonContext";
 import MarketPlace from "./components/MarketPlace/Index";
 import Elemon from "./components/Elemon";
-
+import PetSimulation from './components/PetSimulation/Index.jsx'
 
 
 function MyRoutes() {
@@ -12,14 +12,11 @@ function MyRoutes() {
     <Routes>
     <Route
       path="/"
-      element={
-        <ElemonContextProvider>
-          <Elemon />
-        </ElemonContextProvider>
-      }
+      element={<PetSimulation />} 
     />
 
     <Route path="/market" element={<MarketPlace />} />
+    <Route path="/challenge" element={<PetSimulation />} />
 
     <Route
       path="*"

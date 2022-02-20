@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useContext } from "react";
+import React, { useState, forwardRef, useContext,useEffect } from "react";
 import { getPower } from "./utils/Functions";
 import { ElemonContext } from "./ElemonContext";
 import "./Elemon.css";
@@ -22,9 +22,13 @@ const Alert = forwardRef(function Alert(props, ref) {
 });
 
 
-export default function Elemon() {
+export default function Elemon({pet,setpet}) {
   const myContext = useContext(ElemonContext);
-
+  const updateNewData = myContext.updateNewData;
+  useEffect(() => {
+    updateNewData([pet])
+  }, [])
+  
   const [level, setlevel] = myContext.level;
   const [mypet, setmypet] = myContext.mypet;
   const [star, setstar] = myContext.star;
@@ -120,9 +124,9 @@ export default function Elemon() {
           >
             Elemon ID
           </Button>
-          <Button variant="contained" size="medium" onClick={submitHandler}>
+          {/* <Button variant="contained" size="medium" onClick={submitHandler}>
             Get Power
-          </Button>
+          </Button> */}
         </div>
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
           <Alert
