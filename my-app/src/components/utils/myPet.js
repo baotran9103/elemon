@@ -92,9 +92,9 @@ export class myPet{
     }
     getstarPoints(){
         var temp_star = this.star;       
-      
+        
         var items = this.elemonInfo.starPoint
-        if(!items) return 0
+        if(!items && temp_star ===0) return 0
         return this.runLoop(items,temp_star)
     }
     getBodyPartPoints(){
