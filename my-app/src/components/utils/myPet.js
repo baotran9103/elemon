@@ -24,6 +24,8 @@ export class myPet{
         this.rareFactor = this.getRareFactor()
         this.elemonInfo = this.getElemon()
         this.body=[]
+        this.elcoinCost = 0
+        this.elmonCost = 0
     }
    
     cleanString(data){
@@ -142,5 +144,28 @@ export class myPet{
         temp *= pure
         temp *= (2*this.level+10)/3000
         this.power = Math.round(temp)
+        this.getCost()
+    }
+    getCost(){
+        this.elcoinCost = 0
+        this.elmonCost = 0
+        if(this.level >0){
+            this.elcoinCost += info.LevelCost[this.level]
+        }
+        if(this.star >0){
+            this.elmonCost += info.StartCost[this.star]
+        }
+        if(this.skill1 >0){
+            this.elcoinCost += info.SkillCost[this.skill1]
+        }
+        if(this.skill2 >0){
+            this.elcoinCost +=  info.SkillCost[this.skill2]
+        }
+        if(this.skill3 >0){
+            this.elcoinCost += info.SkillCost[this.skill3]
+        }
+        if(this.skill4 >0){
+            this.elcoinCost += info.SkillCost[this.skill4]
+        }
     }
 }
