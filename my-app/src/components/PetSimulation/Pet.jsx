@@ -20,20 +20,25 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
     pets.splice(idx, 1);
     setpets([...temp]);
   };
+  const coppyHandler = ()=>{
+    console.log(pet)
+    setpets(prev => [...prev,pet]);
+  }
   return (
     <div>
-      <Card sx={{ maxWidth: 400, width: "100%",position:'relative' }}>
-        <div style={{position:'absolute',}}>
-        <CardMedia
-          component="img"
-          height="50"
-          image={`https://app.elemon.io/assets/images/rarity_${data.Rare[pet.rare - 1].name}.png`}
-          alt="My Pet"
-          sx={{ objectFit: "contain" }}
-        />
+      <Card sx={{ maxWidth: 400, width: "100%", position: "relative" }}>
+        <div style={{ position: "absolute" }}>
+          <CardMedia
+            component="img"
+            height="50"
+            image={`https://app.elemon.io/assets/images/rarity_${
+              data.Rare[pet.rare - 1].name
+            }.png`}
+            alt="My Pet"
+            sx={{ objectFit: "contain" }}
+          />
         </div>
-       
-   
+
         <CardMedia
           component="img"
           height="194"
@@ -41,16 +46,22 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
           alt="My Pet"
           sx={{ objectFit: "contain" }}
         />
-          <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-        <CardMedia
-          component="img"
-          height="30"
-          image={`https://app.elemon.io/assets/images/star/star_level_${pet.star}.png`}
-          alt="My Pet"
-          sx={{ objectFit: "contain" }}
-        />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CardMedia
+            component="img"
+            height="30"
+            image={`https://app.elemon.io/assets/images/star/star_level_${pet.star}.png`}
+            alt="My Pet"
+            sx={{ objectFit: "contain" }}
+          />
         </div>
-         {/* <div style={{width:'100%',height:'116%',top:'0',backgroundSize:,backgroundImage:`url(https://app.elemon.io/assets/images/aura/quality_${pet.aura}.png)`}}>
+        {/* <div style={{width:'100%',height:'116%',top:'0',backgroundSize:,backgroundImage:`url(https://app.elemon.io/assets/images/aura/quality_${pet.aura}.png)`}}>
         </div> */}
 
         {/* <CardMedia
@@ -68,23 +79,37 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
             {pet.power}
           </Typography>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-           
-            <img src={`https://app.elemon.io/assets/images/purity_${pet.elclass === pet.elemonInfo.class[0] ? "Pure" : "Hybrid"}.png`} alt="purity"/>
+            <img
+              src={`https://app.elemon.io/assets/images/purity_${
+                pet.elclass === pet.elemonInfo.class[0] ? "Pure" : "Hybrid"
+              }.png`}
+              alt="purity"
+            />
           </Typography>
           <Stack direction="row" spacing={2}>
-            <div style={{display:'grid',justifyContent:'center',justifyItems:'center'}}>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
+            <div
+              style={{
+                display: "grid",
+                justifyContent: "center",
+                justifyItems: "center",
+              }}
             >
-              {data.ElClass[pet.elclass - 1].name}
-              
-            </Typography>
-            <img style={{objectFit:'contain',width:'50px'}} src={`https://app.elemon.io/assets/images/element/${data.ElClass[pet.elclass - 1].name}.png`} alt=""/>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                {data.ElClass[pet.elclass - 1].name}
+              </Typography>
+              <img
+                style={{ objectFit: "contain", width: "50px" }}
+                src={`https://app.elemon.io/assets/images/element/${
+                  data.ElClass[pet.elclass - 1].name
+                }.png`}
+                alt=""
+              />
             </div>
-           
-            
+
             <Typography
               sx={{ fontSize: 14 }}
               color="text.secondary"
@@ -116,18 +141,17 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 {
                   ".stat": {
                     display: "grid",
-                   
+
                     mb: 2,
                     minWidth: 70,
                     width: "100%",
                     textAlign: "left",
-                    
                   },
                 },
               ]}
             >
               <div className="stat">
-                <Stack sx={{gap:'0.25rem'}}>
+                <Stack sx={{ gap: "0.25rem" }}>
                   <div>HP</div>
                   <strong>{pet.body[0]}</strong>
                   <Typography
@@ -140,7 +164,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 </Stack>
               </div>
               <div className="stat">
-                <Stack sx={{gap:'0.25rem'}}>
+                <Stack sx={{ gap: "0.25rem" }}>
                   <div>P.attack </div>
                   <strong>{pet.body[1]}</strong>
                   <Typography
@@ -153,7 +177,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 </Stack>
               </div>
               <div className="stat">
-                <Stack sx={{gap:'0.25rem'}}>
+                <Stack sx={{ gap: "0.25rem" }}>
                   <div>M.attack </div>
                   <strong>{pet.body[2]}</strong>
                   <Typography
@@ -166,7 +190,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 </Stack>
               </div>
               <div className="stat">
-                <Stack sx={{gap:'0.25rem'}}>
+                <Stack sx={{ gap: "0.25rem" }}>
                   <div>P.Def </div>
                   <strong>{pet.body[3]}</strong>
                   <Typography
@@ -179,7 +203,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 </Stack>
               </div>
               <div className="stat">
-                <Stack sx={{gap:'0.25rem'}}>
+                <Stack sx={{ gap: "0.25rem" }}>
                   <div>M.Def </div>
                   <strong>{pet.body[4]}</strong>
                   <Typography
@@ -192,7 +216,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 </Stack>
               </div>
               <div className="stat">
-                <Stack sx={{gap:'0.25rem'}}>
+                <Stack sx={{ gap: "0.25rem" }}>
                   <div>Speed </div>
                   <strong>{pet.body[5]}</strong>
                   <Typography
@@ -206,10 +230,71 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               </div>
             </CardContent>
           </Card>
+          <Card>
+            <CardContent>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  width: "100%"
+                }}
+              >
+                <div  style={{
+                  display: "flex",
+                 gap:'4px',
+                  alignItems:'center',
+                  flexDirection:'column',
+
+                }}>
+                <CardMedia
+                  component="img"
+                  height="30"
+                  image={`/images/icons/icon_ecoin.png`}
+                  alt="My Pet"
+                  sx={{ objectFit: "contain" }}
+                />
+                 <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {pet.elcoinCost}
+                  </Typography>
+                </div>
+              
+                <div style={{
+                  display: "flex",
+                 gap:'4px',            
+                  alignItems:'center',
+                   flexDirection:'column',
+                }}>
+                <CardMedia
+                  component="img"
+                  height="30"
+                  image={`/images/icons/icon_header.png`}
+                  alt="My Pet"
+                  sx={{ objectFit: "contain" }}
+                />
+                 <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {pet.elmonCost}
+                  </Typography>
+                </div>
+              
+              </div>
+            </CardContent>
+          </Card>
         </CardContent>
         <CardActions>
           <Button size="small" onClick={editHandler}>
             Edit Information
+          </Button>
+          <Button size="small" onClick={coppyHandler}>
+            Coppy Pet
           </Button>
           <Button size="small" onClick={deleteHandler}>
             Delete Pet

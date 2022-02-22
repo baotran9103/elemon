@@ -27,11 +27,13 @@ export const PetsContext = createContext()
       const [totalPower, settotalPower] = useState(0)
     const [pets, setpets] = useState([])
     const [editingId, seteditingId] = useState(-1)
-    
+    const [totalElcoinCost, settotalElcoinCost] = useState(453)
+    const [totalElmonCost, settotalElmonCost] = useState(5)
       const addPet = ()=>{
         const mypet = getPower(data) 
         setpets(prev=>[...prev,mypet])
         settotalPower(prev=>prev+mypet.power)
+       
       }
 
     useEffect(() => {
@@ -42,6 +44,8 @@ export const PetsContext = createContext()
     useEffect(() => {
       let cancel = false; 
       settotalPower(prev => pets.reduce((acc,cur)=>acc+cur.power,0))
+      settotalElcoinCost(prev => pets.reduce((acc,cur)=>acc+cur.elcoinCost,0))
+      settotalElmonCost(prev => pets.reduce((acc,cur)=>acc+cur.elmonCost,0) )
       return () => {
         cancel=true;
       }
@@ -53,6 +57,8 @@ export const PetsContext = createContext()
         totalPower: [totalPower, settotalPower],
         editingId:[editingId, seteditingId] ,
         addPet:addPet,
+        totalElcoinCost: [totalElcoinCost, settotalElcoinCost],
+        totalElmonCost:[totalElmonCost, settotalElmonCost]
         
     }
     return (
