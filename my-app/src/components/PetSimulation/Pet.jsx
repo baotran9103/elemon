@@ -21,9 +21,12 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
     setpets([...temp]);
   };
   const coppyHandler = ()=>{
-    console.log(pet)
+    // console.log(pet)
     setpets(prev => [...prev,pet]);
   }
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
   return (
     <div>
       <Card sx={{ maxWidth: 400, width: "100%", position: "relative" }}>
@@ -53,13 +56,16 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
             alignItems: "center",
           }}
         >
-          <CardMedia
+          {
+            pet?.star >0 &&  <CardMedia
             component="img"
             height="30"
             image={`https://app.elemon.io/assets/images/star/star_level_${pet.star}.png`}
             alt="My Pet"
             sx={{ objectFit: "contain" }}
           />
+          }
+         
         </div>
         {/* <div style={{width:'100%',height:'116%',top:'0',backgroundSize:,backgroundImage:`url(https://app.elemon.io/assets/images/aura/quality_${pet.aura}.png)`}}>
         </div> */}
@@ -72,11 +78,9 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
         /> */}
         <CardContent>
           <img src="" alt="" className="petlogo" />
+          <div style={{width:'100%',display:'flex',justifyContent:'space-between',}}>
           <Typography variant="h5" component="div">
             {pet?.elemonInfo.name}
-          </Typography>
-          <Typography variant="h5" color="text.primary" gutterBottom>
-            {pet.power}
           </Typography>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             <img
@@ -84,9 +88,21 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 pet.elclass === pet.elemonInfo.class[0] ? "Pure" : "Hybrid"
               }.png`}
               alt="purity"
+              style={{width: '50px'}}
             />
           </Typography>
-          <Stack direction="row" spacing={2}>
+          </div>
+         <div style={{width:'100%',display:'flex',justifyContent:'flex-start',gap:'0 2rem'}}>
+         <Typography variant="h5" color="text.primary" gutterBottom>
+            Power
+          </Typography>
+         <Typography variant="h5" color="text.primary" gutterBottom>
+            {numberWithCommas(pet.power)}
+          </Typography>
+         </div>
+       
+         
+          <Stack direction="row" spacing={2} sx={{padding:'0.5rem'}}>
             <div
               style={{
                 display: "grid",
@@ -102,7 +118,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                 {data.ElClass[pet.elclass - 1].name}
               </Typography>
               <img
-                style={{ objectFit: "contain", width: "50px" }}
+                style={{ objectFit: "contain", width: "25px" }}
                 src={`https://app.elemon.io/assets/images/element/${
                   data.ElClass[pet.elclass - 1].name
                 }.png`}
@@ -131,7 +147,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               sx={[
                 {
                   m: 0,
-                  p: 1,
+                 
                   Width: 200,
                   display: "grid",
                   gridTemplateColumns: "repeat(3,1fr)",
@@ -142,7 +158,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                   ".stat": {
                     display: "grid",
 
-                    mb: 2,
+                    
                     minWidth: 70,
                     width: "100%",
                     textAlign: "left",
@@ -153,7 +169,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               <div className="stat">
                 <Stack sx={{ gap: "0.25rem" }}>
                   <div>HP</div>
-                  <strong>{pet.body[0]}</strong>
+                  <strong>{numberWithCommas(pet.body[0])}</strong>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
@@ -166,7 +182,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               <div className="stat">
                 <Stack sx={{ gap: "0.25rem" }}>
                   <div>P.attack </div>
-                  <strong>{pet.body[1]}</strong>
+                  <strong>{numberWithCommas(pet.body[1])}</strong>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
@@ -179,7 +195,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               <div className="stat">
                 <Stack sx={{ gap: "0.25rem" }}>
                   <div>M.attack </div>
-                  <strong>{pet.body[2]}</strong>
+                  <strong>{numberWithCommas(pet.body[2])}</strong>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
@@ -192,7 +208,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               <div className="stat">
                 <Stack sx={{ gap: "0.25rem" }}>
                   <div>P.Def </div>
-                  <strong>{pet.body[3]}</strong>
+                  <strong>{numberWithCommas(pet.body[3])}</strong>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
@@ -205,7 +221,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               <div className="stat">
                 <Stack sx={{ gap: "0.25rem" }}>
                   <div>M.Def </div>
-                  <strong>{pet.body[4]}</strong>
+                  <strong>{numberWithCommas(pet.body[4])}</strong>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
@@ -218,7 +234,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
               <div className="stat">
                 <Stack sx={{ gap: "0.25rem" }}>
                   <div>Speed </div>
-                  <strong>{pet.body[5]}</strong>
+                  <strong>{numberWithCommas(pet.body[5])}</strong>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
@@ -244,7 +260,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                   display: "flex",
                  gap:'4px',
                   alignItems:'center',
-                  flexDirection:'column',
+                  // flexDirection:'column',
 
                 }}>
                 <CardMedia
@@ -255,11 +271,10 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                   sx={{ objectFit: "contain" }}
                 />
                  <Typography
-                    sx={{ fontSize: 14 }}
+                    sx={{ fontSize: 14 ,textAlign: "center"}}
                     color="text.secondary"
-                    gutterBottom
                   >
-                    {pet.elcoinCost}
+                    {numberWithCommas(pet.elcoinCost)}
                   </Typography>
                 </div>
               
@@ -267,7 +282,7 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                   display: "flex",
                  gap:'4px',            
                   alignItems:'center',
-                   flexDirection:'column',
+                  //  flexDirection:'column',
                 }}>
                 <CardMedia
                   component="img"
@@ -279,9 +294,8 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
                  <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
-                    gutterBottom
                   >
-                    {pet.elmonCost}
+                    {numberWithCommas(pet.elmonCost)}
                   </Typography>
                 </div>
               

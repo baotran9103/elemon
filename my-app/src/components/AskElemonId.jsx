@@ -13,22 +13,30 @@ function AskElemonId({ open, handleClose }) {
   const myContext = useContext(ElemonContext);
   const updateData = myContext.updateData;
   const updateMore = myContext.updateMore;
-  function getElemonInfo() {
+  async function getElemonInfo() {
+    
     const url = `https://app.elemon.io/elemon/getElemonInfo?tokenId=${myID}`;
+    // const url = `https://elemons.baotran17.repl.co/api/elemons/${myID}`
     axios
       .get(url)
       .then((res) => {
         updateData(res.data.data);
-        let infourl =`https://app.elemon.io/market/getElemonItems?pageNumber=1&pageSize=10&tokenId=${myID}`
+        let infourl =`https://elemons.baotran17.repl.co/api/elemons/${myID}`
         axios.get(infourl).then(result=>{
+        
           if(result.data){
             let t = result.data
-            if(!t.data){
+            // if(!t.data){
+            //   alert("Could not get more Elemon Info, please enter manually !")
+            // }
+            // console.log(t)
+            if(!t){
               alert("Could not get more Elemon Info, please enter manually !")
             }
             else{
-              console.log(t)
-              updateMore(t.data)
+              // console.log(t)
+              // updateMore(t.data)
+              updateMore(t)
             }
           }
         }).catch(err=>alert(err.message))

@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import CustomInput from "../utils/CustomInput";
 import {ElemonContext} from '../ElemonContext'
 
-function SkillCards({star}) {
+function SkillCards({star,aura}) {
   const myContext = useContext(ElemonContext)
  
   const [skill1, setskill1] = myContext.skill1;
@@ -19,7 +19,7 @@ function SkillCards({star}) {
     />
     {
       <CustomInput
-        disabled={star < 3}
+        disabled={star < 3  &&  aura<3}
         type="number"
         label="Skill 2"
         helperText="Please Enter Ability 2 Level"
@@ -28,7 +28,7 @@ function SkillCards({star}) {
     }
     {
       <CustomInput
-        disabled={star < 6}
+        disabled={star < 6 &&  aura<5}
         type="number"
         label="Skill 3"
         helperText="Please Enter Ability 3 Level"
@@ -37,7 +37,7 @@ function SkillCards({star}) {
     }
     {
       <CustomInput
-        disabled={star < 9}
+        disabled={star < 9 &&  aura<7}
         type="number"
         label="Skill 4"
         helperText="Please Enter Ability 4 Level"

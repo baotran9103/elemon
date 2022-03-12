@@ -48,7 +48,7 @@ export class myPet{
         c += this.skill2> 0 
         c += this.skill3> 0 
         c += this.skill4> 0 
-        console.log(c,sum)
+        // console.log(c,sum)
         return sum*c;
     }
    
@@ -125,7 +125,7 @@ export class myPet{
     }
 
     getPower(){
-        console.log(this.elemonInfo )
+        // console.log(this.elemonInfo )
         let temp = 0
         this.getClassPoints()
         this.getauraPoints()
@@ -136,8 +136,8 @@ export class myPet{
             this.body[i] = Math.floor(this.body[i]+0.5)
             temp +=this.body[i]
         }
-        console.log(this.body)
-        console.log(temp)
+        // console.log(this.body)
+        // console.log(temp)
         temp*= this.rareFactor
         temp*= (10+this.TotalSkill)
         let pure = this.elclass === this.elemonInfo.class[0] ?1.5:1

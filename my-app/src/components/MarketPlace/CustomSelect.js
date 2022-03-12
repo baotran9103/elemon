@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import ListItemText from '@mui/material/ListItemText';
-const ITEM_HEIGHT = 48;
+const ITEM_HEIGHT = 100;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
@@ -54,10 +54,10 @@ const CustomSelect = ({
           onChange={handleChange}
           label={label}
           type={type}
-          sx={{ m: 1, width: 300 }}
+          sx={{ m: 1, width: 300}}
           input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
           renderValue={(selected) => (
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5,overflow:'auto' ,maxHeight:80}}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5,overflow:'auto' ,maxHeight:200}}>
               {selected.map((value) => (
                 <Chip variant="outlined" key={value} label={items.filter((i)=>i[itemID]===value)[0][itemName]} />
               ))}
