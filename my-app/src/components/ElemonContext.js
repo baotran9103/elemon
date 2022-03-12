@@ -72,9 +72,10 @@ export default function ElemonContextProvider({children}){
         setbody6(info.body6)
     }
     const updateMore = (data)=>{
-        console.log(data)
+        // console.log(data)
         if(data.length===0) return;
-        let info = data[0]
+        // let info = data[0]
+        let info = data
         setpet(info.baseCardId)
         setelclass(info.class)
         setaura(info.quality)

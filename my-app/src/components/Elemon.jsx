@@ -22,18 +22,18 @@ const Alert = forwardRef(function Alert(props, ref) {
 });
 
 
-export default function Elemon({pet,setpet}) {
+export default function Elemon({pet,setpet,myValues}) {
   const myContext = useContext(ElemonContext);
   const updateNewData = myContext.updateNewData;
   useEffect(() => {
     updateNewData([pet])
   }, [])
-  
+  const [dialogopen, setdialogopen] = myValues
   const [level, setlevel] = myContext.level;
   const [mypet, setmypet] = myContext.mypet;
   const [star, setstar] = myContext.star;
   const [open, setOpen] = useState(false);
-  const [dialogopen, setdialogopen] = useState(false);
+  const [aura, setaura] = myContext.aura;
   const [myPower, setmyPower] = useState(0);
   const [myBody, setmyBody] = useState([])
   const submitHandler = () => {
@@ -102,7 +102,7 @@ export default function Elemon({pet,setpet}) {
               <RarityCard />
               <AuraCard />
             </div>
-            <SkillCards star={star} />
+            <SkillCards star={star} aura={aura}/>
           </div>
         </div>
         <div className="item__item">
@@ -117,13 +117,13 @@ export default function Elemon({pet,setpet}) {
             gap: "0 2rem",
           }}
         >
-          <Button
+          {/* <Button
             variant="contained"
             size="medium"
             onClick={handleClickOpenDialog}
           >
             Elemon ID
-          </Button>
+          </Button> */}
           {/* <Button variant="contained" size="medium" onClick={submitHandler}>
             Get Power
           </Button> */}

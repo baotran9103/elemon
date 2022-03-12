@@ -15,16 +15,19 @@ function Pets() {
   const [editingId, seteditingId] = myContext.editingId;
   const [open, setopen] = useState(false);
   const addPet = myContext.addPet;
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
   return (
     <div style={{ display: "grid", padding: "2rem" }}>
-      <div style={{ display: "flex",flexWrap:'wrap' ,gap:'1.5rem'}}>
+      <div style={{ display: "flex",flexWrap:'wrap' ,gap:'0 1.5rem'}}>
         <div style={{ display: "flex" }}>
           <Typography
             variant={"h5"}
             sx={[{ strong: { fontSize: "2rem" } }]}
             component="div"
           >
-            Total Power <strong>{totalPower}</strong>
+            Total Power <strong>{numberWithCommas(totalPower)}</strong>
           </Typography>
           <img
             style={{ width: "40px", height: "40px", objectFit: "contain" ,marginLeft:'8px'}}
@@ -38,7 +41,7 @@ function Pets() {
             sx={[{ strong: { fontSize: "2rem" } }]}
             component="div"
           >
-            Total Elcoin Cost <strong>{totalElcoinCost}</strong>
+            Total Elcoin Cost <strong>{numberWithCommas(totalElcoinCost)}</strong>
           </Typography>
           <img
             style={{ width: "40px", height: "40px", objectFit: "contain",marginLeft:'8px' }}
@@ -53,7 +56,7 @@ function Pets() {
             sx={[{ strong: { fontSize: "2rem" } }]}
             component="div"
           >
-            Total Elmon Cost <strong>{totalElmonCost}</strong>
+            Total Elmon Cost <strong>{numberWithCommas(totalElmonCost)}</strong>
           </Typography>
           <img
             style={{ width: "40px", height: "40px", objectFit: "contain",marginLeft:'8px' }}

@@ -14,7 +14,10 @@ import { getPower } from "../utils/Functions";
 function MyDialog({ open, setopen, editingId, seteditingId ,pets,setpets}) {
   const [thisPet, setthisPet] = useState()
 const editContext = useContext(ElemonContext)
-
+const [dialogopen, setdialogopen] = useState(false);
+const handleClickOpenDialog = () => {
+  setdialogopen(true);
+};
     useEffect(() => {
       let cancel = false
 
@@ -63,9 +66,9 @@ const editContext = useContext(ElemonContext)
     let temp = pets
     // let temp = pets.splice(editingId,1,t)
     temp.splice(editingId,1,t)
-    console.log(editingId)
-    console.log(t)
-    console.log(temp)
+    // console.log(editingId)
+    // console.log(t)
+    // console.log(temp)
     setpets([...temp])
     closeHandler()
   }
@@ -92,15 +95,19 @@ const editContext = useContext(ElemonContext)
           </Button>
         </Toolbar>
 
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle id="alert-dialog-title" sx={{ textAlign:'center'}} variant='primary'>
           {"Edit Pet Information"}
         </DialogTitle>
         <DialogContent>
         
-            <Elemon pet={thisPet} setpet ={setthisPet} />
+            <Elemon pet={thisPet} setpet ={setthisPet} myValues={[dialogopen, setdialogopen]}/>
           
         </DialogContent>
         <DialogActions>
+          
+          <Button variant="contained" onClick={handleClickOpenDialog }>
+            Enter Pet ID
+          </Button>
           <Button variant="contained" onClick={CalculatePower }>
             Get Power
           </Button>
