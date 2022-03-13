@@ -62,6 +62,7 @@ function Index() {
               >
                 <MenuItem onClick={handlePageMenuClose}><Link className='navlink ' to='/'>Get Power</Link></MenuItem>
                 <MenuItem onClick={handlePageMenuClose}><Link className='navlink' to='/market'>Marketplace</Link></MenuItem>
+                <MenuItem onClick={handlePageMenuClose}><Link className='navlink' to='/challenge'>Challenge</Link></MenuItem>
               </Menu>
           <div style={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
             <IconButton onClick={() => {}} sx={{ p: 0, m: 2 }}>
@@ -104,8 +105,8 @@ function Index() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem> */}
               </Menu>
             </div>
           )}

@@ -4565,3 +4565,6 @@ export const newClass = {
     "Fairy":18
    
 }
+
+export const APP_ID = process.env.REACT_APP_MORALIS_APPLICATION_ID;
+export const SERVER_URL = process.env.REACT_APP_MORALIS_SERVER_URL;
