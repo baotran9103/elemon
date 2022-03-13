@@ -5,7 +5,7 @@ import ElemonContextProvider from "./components/ElemonContext";
 import MarketPlace from "./components/MarketPlace/Index";
 import Elemon from "./components/Elemon";
 import PetSimulation from './components/PetSimulation/Index.jsx'
-
+import Challenge from './components/Challenge/Index.jsx'
 
 function MyRoutes() {
   return (
@@ -16,7 +16,7 @@ function MyRoutes() {
     />
 
     <Route path="/market" element={<MarketPlace />} />
-    <Route path="/challenge" element={<PetSimulation />} />
+    <Route path="/challenge" element={<Challenge />} />
 
     <Route
       path="*"
