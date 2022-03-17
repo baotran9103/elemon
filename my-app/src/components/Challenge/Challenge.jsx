@@ -54,7 +54,7 @@ function Challenge() {
       <div>
       <Typography sx={{wordBreak:'break-word'}} variant="body1">Challenge</Typography>
       <div>
-      <Button variant="contained" onClick={getChallenge}>Get Challenge List</Button>
+      <Button id='getChallenge' variant="contained" onClick={getChallenge}>Get Challenge List</Button>
       </div>
       </div>
      

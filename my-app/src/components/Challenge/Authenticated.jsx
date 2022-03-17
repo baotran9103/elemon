@@ -8,9 +8,9 @@ function Authenticated({ EMPTammount, isAuthorized }) {
   return (
     <div>
       <Paper elevation={3} sx={{ padding: "1rem" }}>
-        <CustomText text="Current chain" info={chain?.name} />
-        <CustomText text="Current address" info={account} />
-        <CustomText text="EMP token owned" info={EMPTammount} />
+        <CustomText id='chainName' text="Current chain" info={chain?.name} />
+        <CustomText id='walletAdress' text="Current address" info={account} />
+        <CustomText id='EmpToken' text="EMP token owned" info={EMPTammount} />
        
       </Paper>
       <div>
