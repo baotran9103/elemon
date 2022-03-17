@@ -77,7 +77,7 @@ function Login() {
   return (
    <div style={{display:'grid',padding:'1rem'}}>
      <div>
-     <Button  variant="contained" onClick={()=>{logout()}}>Log Out</Button>
+     <Button className='Web3Button' id='Logout-web3' variant="contained" onClick={()=>{logout()}}>Log Out</Button>
      </div>
 
      <Authenticated EMPTammount={EMPTammount} isAuthorized = {isAuthorized}/>

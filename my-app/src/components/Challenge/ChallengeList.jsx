@@ -42,6 +42,7 @@ function ChallengeList({ challenges ,getInfo,selectedID}) {
           challenges.map((challenge, id) => {
             return (
               <ListItem
+              id='getUser'
               onClick={()=>getInfo(challenge.userId,challenge)}
               sx={{ backgroundColor:`${selectedID===challenge.userId?'rgba(0,0,0,0.1)':''}`,':hover': { background:'rgba(0,0,0,0.12)',transition:'0.3s ease all'}}}
                 key={challenge.userId}
@@ -55,7 +56,7 @@ function ChallengeList({ challenges ,getInfo,selectedID}) {
                 <ListItemAvatar>
                   <Avatar src={getImage(challenge.avatar)} alt="" />
                 </ListItemAvatar>
-                <ListItemText
+                <ListItemText id='userInfo'
                   primary={`Power: ${numberWithCommas(challenge.point)}`}
                   secondary={`Elcoin: ${numberWithCommas(challenge.elcoinBet)}`}
                 />

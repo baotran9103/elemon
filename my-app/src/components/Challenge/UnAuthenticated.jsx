@@ -35,8 +35,8 @@ function UnAuthenticated({authenticate,enableWeb3}) {
   return (
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',height:'100vh',gap:'2rem'}}>
       <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',height:'100vh',gap:'1rem'}}>
-      <Button  variant="contained" onClick={Metamask}>Connect with Metamask</Button>
-        <Button  variant="contained" onClick={WalletConnect}>
+      <Button className='Web3Button' id='Metamask-Button'  variant="contained" onClick={Metamask}>Connect with Metamask</Button>
+        <Button className='Web3Button' id='WalletConnect-Button'   variant="contained" onClick={WalletConnect}>
           Walletconnect
         </Button>
       </div>
