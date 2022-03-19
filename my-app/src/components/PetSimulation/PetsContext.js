@@ -2,7 +2,6 @@ import { createContext ,useState,useEffect,useContext} from "react";
 import { getPower } from "../utils/Functions";
 import * as d from '../utils/DefaultStates'
 import ElemonContextProvider from "../ElemonContext";
-
 export const PetsContext = createContext()
  const PetsContextProvider = ({children})=>{
    
@@ -29,11 +28,16 @@ export const PetsContext = createContext()
     const [editingId, seteditingId] = useState(-1)
     const [totalElcoinCost, settotalElcoinCost] = useState(453)
     const [totalElmonCost, settotalElmonCost] = useState(5)
+    const [addPetCount, setaddPetCount] = useState(0)
       const addPet = ()=>{
         const mypet = getPower(data) 
         setpets(prev=>[...prev,mypet])
         settotalPower(prev=>prev+mypet.power)
+        window.dataLayer = window.dataLayer || []
        
+        window.dataLayer.push({addPet:addPetCount+1});
+        setaddPetCount(prev=>prev+1)
+        console.log(window.dataLayer)
       }
 
     useEffect(() => {

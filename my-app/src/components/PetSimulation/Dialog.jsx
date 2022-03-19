@@ -10,6 +10,7 @@ import Elemon from "../Elemon";
 import {ElemonContext} from "../ElemonContext";
 import { getPower } from "../utils/Functions";
 
+import {Aura,Rare,ElClass} from '../utils/Data'
 
 function MyDialog({ open, setopen, editingId, seteditingId ,pets,setpets}) {
   const [thisPet, setthisPet] = useState()
@@ -70,7 +71,23 @@ const handleClickOpenDialog = () => {
     // console.log(t)
     // console.log(temp)
     setpets([...temp])
+    window.dataLayer = window.dataLayer || []
+    // for(let i =0;i< window.dataLayer;i++){
+    //   if(window.dataLayer[i].hasOwnProperty("Petcalculate")){
+    //     window.dataLayer.splice(i,1)
+    //   }
+    // }
+    window.dataLayer.push({Petcalculate:{
+      name:t.elemonInfo.name,      
+      star:t.star,
+      level:t.level,
+      aura:Aura.filter(item=>item.id === t.aura)[0].name,
+      class:ElClass.filter(item=>item.id === t.elclass)[0].name,
+      rare:Rare.filter(item=>item.id === t.rare)[0].name,
+      pure:t.elclass===t.elemonInfo.class[0]?'Pure':'Hybrid'
+    },'event':'getPower'});
     closeHandler()
+    // console.log( window.dataLayer)
   }
 
   return (
@@ -108,7 +125,7 @@ const handleClickOpenDialog = () => {
           <Button variant="contained" onClick={handleClickOpenDialog }>
             Enter Pet ID
           </Button>
-          <Button variant="contained" onClick={CalculatePower }>
+          <Button id='getPower' variant="contained" onClick={CalculatePower }>
             Get Power
           </Button>
         </DialogActions>

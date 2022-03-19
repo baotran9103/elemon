@@ -33,7 +33,6 @@ const CustomSelect = ({
       const {
         target: { value },
       } = event;
-      console.log(event.target.value)
       if(value[value.length-1]===-1){
           setvalue([])
           return
@@ -42,13 +41,19 @@ const CustomSelect = ({
         // On autofill we get a stringified value.
         typeof value === 'string' ? value.split(',') : value,
       );
+      window.dataLayer = window.dataLayer || []
+      let t = {}
+      t[label] = typeof value === 'string' ? value.split(',') : value
+      window.dataLayer.push(t)
+      // console.log({label,typeof value === 'string' ? value.split(',') : value})
     };
     return (
       <div>
         <InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
         <Select
+         
           labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
+         
           multiple
           value={value}
           onChange={handleChange}
@@ -57,9 +62,9 @@ const CustomSelect = ({
           sx={{ m: 1, width: 300}}
           input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
           renderValue={(selected) => (
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5,overflow:'auto' ,maxHeight:200}}>
+            <Box  id="market_select_values" sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5,overflow:'auto' ,maxHeight:200}}>
               {selected.map((value) => (
-                <Chip variant="outlined" key={value} label={items.filter((i)=>i[itemID]===value)[0][itemName]} />
+                <Chip className={`market_filter_${label}`} id='selected_value'  variant="outlined" key={value} label={items.filter((i)=>i[itemID]===value)[0][itemName]} />
               ))}
             </Box>
           )}

@@ -1,5 +1,5 @@
 import Avatar from "@mui/material/Avatar";
-import { Rare,Aura } from "../utils/Data";
+import { Rare,Aura, } from "../utils/Data";
 import { Button } from "@mui/material";
 var formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -9,6 +9,30 @@ var formatter = new Intl.NumberFormat('en-US', {
   //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
   //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
 });
+
+const buyClickHandler = (params)=>{
+  console.log(params)
+  if(params?.row){
+    let t= params.row;
+    let info ={
+      name:t.name,
+      speed: t.body[5],
+      purity:t.purity,
+      price:t.price,
+      rate:t.rate,
+      point:t.point,
+      class:t.class,
+      Rare:Rare.filter(item=>item.id===t.rarity)[0].name,
+      quality:Aura.filter(item=>item.id===t.quality)[0].name
+    }
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event:'BuyClick',
+      petInfo:info
+    })
+  }
+}
+
 export const columns = [
   { field: "id", headerName: "id", width: 90 },
   { field: "name", headerName: "Elemon", width: 110 },
@@ -98,7 +122,8 @@ export const columns = [
     headerName: "Action",
     width: 130,
     renderCell: (params) => (
-      <a
+      <div id="BuyClick" onClick={()=>buyClickHandler(params)}>
+  <a
         style={{ textDecoration: "none", color: "#1976D2" }}
         href={`${params.value ? params.value : "/"}`}
         rel="noopener noreferrer"
@@ -106,6 +131,8 @@ export const columns = [
       >
         <Button variant="outlined">Buy </Button>
       </a>
+      </div>
+    
     ),
   },
 ];
