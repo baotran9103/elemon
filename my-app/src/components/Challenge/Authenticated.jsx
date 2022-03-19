@@ -30,11 +30,11 @@ const NotAuthorized = () =>{
   )
 }
 
-const CustomText = ({ text, info }) => {
+const CustomText = ({ text, info ,id=''}) => {
   return (
     <div style={{display:'grid',gap:'1rem',gridTemplateColumns:'1fr 4fr',margin:'1rem'}}>
       <Typography sx={{wordBreak:'break-word'}} variant="body1">{text}</Typography>
-      <Typography sx={{wordBreak:'break-word'}} variant="body1"> {info}</Typography>
+      <Typography id={id} sx={{wordBreak:'break-word'}} variant="body1"> {info}</Typography>
     </div>
   );
 };
