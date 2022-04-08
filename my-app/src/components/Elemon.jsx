@@ -86,14 +86,16 @@ export default function Elemon({pet,setpet,myValues}) {
             <CustomInput
               type="number"
               label="Level"
-              helperText="Please Enter Elemon Level"
+              helperText="Please Enter Level"
               useValues={[level, setlevel]}
+              max={60}
             />
             <CustomInput
               type="number"
               label="Star"
               helperText="Please Enter Stars"
               useValues={[star, setstar]}
+              max={9}
             />
           </div>
 

@@ -13,35 +13,43 @@ function AskElemonId({ open, handleClose }) {
   const myContext = useContext(ElemonContext);
   const updateData = myContext.updateData;
   const updateMore = myContext.updateMore;
+
+  async function getInfo(myID) {
+    let infourl = `https://elemons.baotran17.repl.co/api/elemons/${myID}`;
+    axios
+      .get(infourl)
+      .then((result) => {
+        if (result.data) {
+          let t = result.data;
+          if (!t) {
+            alert("Could not get more Elemon Info, please enter manually !");
+          } else {
+            updateMore(t);
+          }
+        }
+      })
+      .catch((err) => {
+
+        alert("Could not get more Elemon Info, please enter manually !");
+        console.log(err.message);
+      });
+  }
+
   async function getElemonInfo() {
-    
     const url = `https://app.elemon.io/elemon/getElemonInfo?tokenId=${myID}`;
     // const url = `https://elemons.baotran17.repl.co/api/elemons/${myID}`
     axios
       .get(url)
       .then((res) => {
         updateData(res.data.data);
-        let infourl =`https://elemons.baotran17.repl.co/api/elemons/${myID}`
-        axios.get(infourl).then(result=>{
-        
-          if(result.data){
-            let t = result.data
-            // if(!t.data){
-            //   alert("Could not get more Elemon Info, please enter manually !")
-            // }
-            // console.log(t)
-            if(!t){
-              alert("Could not get more Elemon Info, please enter manually !")
-            }
-            else{
-              // console.log(t)
-              // updateMore(t.data)
-              updateMore(t)
-            }
-          }
-        }).catch(err=>alert(err.message))
+        getInfo(myID);
       })
-      .catch((e) => console.log(e.message));
+      .catch((e) => {
+        alert("Could not get more skills Info, please enter manually !");
+
+        console.log(e.message);
+        getInfo(myID);
+      });
     handleClose();
   }
   return (
