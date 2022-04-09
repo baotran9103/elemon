@@ -16,6 +16,7 @@ function SkillCards({star,aura}) {
       label="Skill 1"
       helperText="Please Enter Ability 1 Level"
       useValues={[skill1, setskill1]}
+      
     />
     {
       <CustomInput

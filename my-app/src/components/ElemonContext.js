@@ -72,14 +72,28 @@ export default function ElemonContextProvider({children}){
         setbody6(info.body6)
     }
     const updateMore = (data)=>{
-        // console.log(data)
-        if(data.length===0) return;
+        console.log(data)
+        // if(data.length===0) return;
+        if(!data) return 
         // let info = data[0]
         let info = data
         setpet(info.baseCardId)
         setelclass(info.class)
         setaura(info.quality)
+        setelclass(info.class)
+
+        // new api
+        setbody1(info.bodyPart1)
+        setbody2(info.bodyPart2)
+        setbody3(info.bodyPart3)
+        setbody4(info.bodyPart4)
+        setbody5(info.bodyPart5)
+        setbody6(info.bodyPart6)
+        setpet(info.baseCardId)
+        setpet(info.baseCardId)
         setrare(info.rarity)
+        setaura(info.quality)
+
     }
     const value = {
         pet:[pet, setpet] ,

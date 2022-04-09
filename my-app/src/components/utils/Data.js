@@ -1,100 +1,140 @@
-export const Elemons = [
+export const Elemons =[
     {
-        name: "DragonAska",
-        id:1
+        "name": "DragonAska",
+        "id": 1
     },
     {
-        name: "PrimeDragonAska",
-        id:2
+        "name": "PrimeDragonAska",
+        "id": 2
     },
     {
-        name: "RaxMirade",
-        id:3
+        "name": "RaxMirade",
+        "id": 3
     },
     {
-        name: "Neikoo",
-        id:4
+        "name": "Neikoo",
+        "id": 4
     },
     {
-        name: "Raimaster",
-        id:5
+        "name": "Raimaster",
+        "id": 5
     },
     {
-        name: "Raizer",
-        id:6
+        "name": "Raizer",
+        "id": 6
     },
     {
-        name: "Earkoo",
-        id:7
+        "name": "Earkoo",
+        "id": 7
     },
     {
-        name: "Skurumi",
-        id:8
+        "name": "Skurumi",
+        "id": 8
     },
     {
-        name: "RusMoonch",
-        id:9
+        "name": "RusMoonch",
+        "id": 9
     },
     {
-        name: "PoxArchies",
-        id:10
+        "name": "PoxArchies",
+        "id": 10
     },
     {
-        name: "Legolas",
-        id:11
+        "name": "Legolas",
+        "id": 11
     },
     {
-        name: "Mykasa",
-        id:12
+        "name": "Mykasa",
+        "id": 12
     },
     {
-        name: "Cokoner",
-        id:13
+        "name": "Cokoner",
+        "id": 13
     },
     {
-        name: "Hyugar",
-        id:15
+        "name": "DoomVader",
+        "id": 14
     },
     {
-        name: "Inori",
-        id:16
+        "name": "Hyugar",
+        "id": 15
     },
     {
-        name: "Elight",
-        id:17
+        "name": "Inori",
+        "id": 16
     },
     {
-        name: "SkyGaden",
-        id:18
+        "name": "Elight",
+        "id": 17
     },
     {
-        name: "Scary",
-        id:19
+        "name": "SkyGaden",
+        "id": 18
     },
     {
-        name: "Finter",
-        id:20
+        "name": "Scary",
+        "id": 19
     },
     {
-        name: "Ties",
-        id:21
+        "name": "Finter",
+        "id": 20
     },
     {
-        name: "Kuroo",
-        id:22
+        "name": "Ties",
+        "id": 21
     },
     {
-        name: "Hoorus",
-        id:26
+        "name": "Kuroo",
+        "id": 22
     },
     {
-        name: "CorsairMastic",
-        id:27
+        "name": "Monster1",
+        "id": 23
     },
     {
-        name: "CorsairLord",
-        id:28
+        "name": "Monster2",
+        "id": 24
     },
+    {
+        "name": "Monster3",
+        "id": 25
+    },
+    {
+        "name": "Hoorus",
+        "id": 26
+    },
+    {
+        "name": "CorsairMastic",
+        "id": 27
+    },
+    {
+        "name": "CorsairLord",
+        "id": 28
+    },
+    {
+        "name": "Hiraki",
+        "id": 29
+    },
+    {
+        "name": "Mazinoo",
+        "id": 30
+    },
+    {
+        "name": "Volcanor",
+        "id": 31
+    },
+    {
+        "name": "Yurae",
+        "id": 32
+    },
+    {
+        "name": "Panther",
+        "id": 33
+    },
+    {
+        "name": "Washina",
+        "id": 34
+    }
 ]
 export const ElClass = [
     {
@@ -300,6 +340,15 @@ export const LevelStats = {
             20,
             0,
             0,
+            0,
+            40,
+            30,
+            15,
+            25,
+            10,
+            20,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -339,6 +388,15 @@ export const LevelStats = {
             60,
             20,
             50,
+            40,
+            0,
+            0,
+            0,
+            80,
+            60,
+            30,
+            50,
+            20,
             40,
             0,
             0,
@@ -384,6 +442,15 @@ export const LevelStats = {
             60,
             0,
             0,
+            0,
+            120,
+            90,
+            45,
+            75,
+            30,
+            60,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -423,6 +490,15 @@ export const LevelStats = {
             120,
             40,
             100,
+            80,
+            0,
+            0,
+            0,
+            160,
+            120,
+            60,
+            100,
+            40,
             80,
             0,
             0,
@@ -468,6 +544,15 @@ export const LevelStats = {
             100,
             0,
             0,
+            0,
+            200,
+            150,
+            75,
+            125,
+            50,
+            100,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -507,6 +592,15 @@ export const LevelStats = {
             180,
             60,
             150,
+            120,
+            0,
+            0,
+            0,
+            240,
+            180,
+            90,
+            150,
+            60,
             120,
             0,
             0,
@@ -552,6 +646,15 @@ export const LevelStats = {
             140,
             0,
             0,
+            0,
+            280,
+            210,
+            105,
+            175,
+            70,
+            140,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -591,6 +694,15 @@ export const LevelStats = {
             240,
             80,
             200,
+            160,
+            0,
+            0,
+            0,
+            320,
+            240,
+            120,
+            200,
+            80,
             160,
             0,
             0,
@@ -636,6 +748,15 @@ export const LevelStats = {
             180,
             0,
             0,
+            0,
+            360,
+            270,
+            135,
+            225,
+            90,
+            180,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -675,6 +796,15 @@ export const LevelStats = {
             300,
             100,
             250,
+            200,
+            0,
+            0,
+            0,
+            400,
+            300,
+            150,
+            250,
+            100,
             200,
             0,
             0,
@@ -720,6 +850,15 @@ export const LevelStats = {
             220,
             0,
             0,
+            0,
+            440,
+            330,
+            165,
+            275,
+            110,
+            220,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -759,6 +898,15 @@ export const LevelStats = {
             360,
             120,
             300,
+            240,
+            0,
+            0,
+            0,
+            480,
+            360,
+            180,
+            300,
+            120,
             240,
             0,
             0,
@@ -804,6 +952,15 @@ export const LevelStats = {
             260,
             0,
             0,
+            0,
+            520,
+            390,
+            195,
+            325,
+            130,
+            260,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -843,6 +1000,15 @@ export const LevelStats = {
             420,
             140,
             350,
+            280,
+            0,
+            0,
+            0,
+            560,
+            420,
+            210,
+            350,
+            140,
             280,
             0,
             0,
@@ -888,6 +1054,15 @@ export const LevelStats = {
             300,
             0,
             0,
+            0,
+            600,
+            450,
+            225,
+            375,
+            150,
+            300,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -927,6 +1102,15 @@ export const LevelStats = {
             480,
             160,
             400,
+            320,
+            0,
+            0,
+            0,
+            640,
+            480,
+            240,
+            400,
+            160,
             320,
             0,
             0,
@@ -972,6 +1156,15 @@ export const LevelStats = {
             340,
             0,
             0,
+            0,
+            680,
+            510,
+            255,
+            425,
+            170,
+            340,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -1011,6 +1204,15 @@ export const LevelStats = {
             540,
             180,
             450,
+            360,
+            0,
+            0,
+            0,
+            720,
+            540,
+            270,
+            450,
+            180,
             360,
             0,
             0,
@@ -1056,6 +1258,15 @@ export const LevelStats = {
             380,
             0,
             0,
+            0,
+            760,
+            570,
+            285,
+            475,
+            190,
+            380,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -1098,6 +1309,15 @@ export const LevelStats = {
             400,
             0,
             0,
+            0,
+            800,
+            600,
+            300,
+            500,
+            200,
+            400,
+            0,
+            0,
             0
         ],
         "pointPercent": [
@@ -1120,7 +1340,7 @@ export const LevelStats = {
             1843,
             101,
             0,
-            723
+            3615
         ],
         "pointNumber": [
             840,
@@ -1137,6 +1357,15 @@ export const LevelStats = {
             630,
             210,
             525,
+            420,
+            0,
+            0,
+            0,
+            840,
+            630,
+            315,
+            525,
+            210,
             420,
             0,
             0,
@@ -1162,7 +1391,7 @@ export const LevelStats = {
             1971,
             101,
             0,
-            814
+            4070
         ],
         "pointNumber": [
             880,
@@ -1179,6 +1408,15 @@ export const LevelStats = {
             660,
             220,
             550,
+            440,
+            0,
+            0,
+            0,
+            880,
+            660,
+            330,
+            550,
+            220,
             440,
             0,
             0,
@@ -1204,7 +1442,7 @@ export const LevelStats = {
             2099,
             101,
             0,
-            914
+            4570
         ],
         "pointNumber": [
             920,
@@ -1221,6 +1459,15 @@ export const LevelStats = {
             690,
             230,
             575,
+            460,
+            0,
+            0,
+            0,
+            920,
+            690,
+            345,
+            575,
+            230,
             460,
             0,
             0,
@@ -1246,7 +1493,7 @@ export const LevelStats = {
             2231,
             101,
             0,
-            1021
+            5105
         ],
         "pointNumber": [
             960,
@@ -1263,6 +1510,15 @@ export const LevelStats = {
             720,
             240,
             600,
+            480,
+            0,
+            0,
+            0,
+            960,
+            720,
+            360,
+            600,
+            240,
             480,
             0,
             0,
@@ -1288,7 +1544,7 @@ export const LevelStats = {
             2366,
             101,
             0,
-            1137
+            5685
         ],
         "pointNumber": [
             1000,
@@ -1305,6 +1561,15 @@ export const LevelStats = {
             750,
             250,
             625,
+            500,
+            0,
+            0,
+            0,
+            1000,
+            750,
+            375,
+            625,
+            250,
             500,
             0,
             0,
@@ -1330,7 +1595,7 @@ export const LevelStats = {
             2508,
             101,
             0,
-            1261
+            6305
         ],
         "pointNumber": [
             1040,
@@ -1347,6 +1612,15 @@ export const LevelStats = {
             780,
             260,
             650,
+            520,
+            0,
+            0,
+            0,
+            1040,
+            780,
+            390,
+            650,
+            260,
             520,
             0,
             0,
@@ -1372,7 +1646,7 @@ export const LevelStats = {
             2649,
             101,
             0,
-            1394
+            6970
         ],
         "pointNumber": [
             1080,
@@ -1389,6 +1663,15 @@ export const LevelStats = {
             810,
             270,
             675,
+            540,
+            0,
+            0,
+            0,
+            1080,
+            810,
+            405,
+            675,
+            270,
             540,
             0,
             0,
@@ -1414,7 +1697,7 @@ export const LevelStats = {
             2796,
             101,
             0,
-            1536
+            7680
         ],
         "pointNumber": [
             1120,
@@ -1431,6 +1714,15 @@ export const LevelStats = {
             840,
             280,
             700,
+            560,
+            0,
+            0,
+            0,
+            1120,
+            840,
+            420,
+            700,
+            280,
             560,
             0,
             0,
@@ -1456,7 +1748,7 @@ export const LevelStats = {
             2944,
             101,
             0,
-            1687
+            8435
         ],
         "pointNumber": [
             1160,
@@ -1473,6 +1765,15 @@ export const LevelStats = {
             870,
             290,
             725,
+            580,
+            0,
+            0,
+            0,
+            1160,
+            870,
+            435,
+            725,
+            290,
             580,
             0,
             0,
@@ -1498,7 +1799,7 @@ export const LevelStats = {
             3100,
             101,
             0,
-            1848
+            9240
         ],
         "pointNumber": [
             1200,
@@ -1515,6 +1816,15 @@ export const LevelStats = {
             900,
             300,
             750,
+            600,
+            0,
+            0,
+            0,
+            1200,
+            900,
+            450,
+            750,
+            300,
             600,
             0,
             0,
@@ -1540,7 +1850,7 @@ export const LevelStats = {
             3448,
             101,
             0,
-            2019
+            10095
         ],
         "pointNumber": [
             1240,
@@ -1557,6 +1867,15 @@ export const LevelStats = {
             930,
             310,
             775,
+            620,
+            0,
+            0,
+            0,
+            1240,
+            930,
+            465,
+            775,
+            310,
             620,
             0,
             0,
@@ -1582,7 +1901,7 @@ export const LevelStats = {
             3616,
             101,
             0,
-            2200
+            11000
         ],
         "pointNumber": [
             1280,
@@ -1599,6 +1918,15 @@ export const LevelStats = {
             960,
             320,
             800,
+            640,
+            0,
+            0,
+            0,
+            1280,
+            960,
+            480,
+            800,
+            320,
             640,
             0,
             0,
@@ -1624,7 +1952,7 @@ export const LevelStats = {
             3790,
             101,
             0,
-            2392
+            11960
         ],
         "pointNumber": [
             1320,
@@ -1641,6 +1969,15 @@ export const LevelStats = {
             990,
             330,
             825,
+            660,
+            0,
+            0,
+            0,
+            1320,
+            990,
+            495,
+            825,
+            330,
             660,
             0,
             0,
@@ -1666,7 +2003,7 @@ export const LevelStats = {
             3965,
             101,
             0,
-            2595
+            12975
         ],
         "pointNumber": [
             1360,
@@ -1683,6 +2020,15 @@ export const LevelStats = {
             1020,
             340,
             850,
+            680,
+            0,
+            0,
+            0,
+            1360,
+            1020,
+            510,
+            850,
+            340,
             680,
             0,
             0,
@@ -1708,7 +2054,7 @@ export const LevelStats = {
             4148,
             101,
             0,
-            2809
+            14045
         ],
         "pointNumber": [
             1400,
@@ -1725,6 +2071,15 @@ export const LevelStats = {
             1050,
             350,
             875,
+            700,
+            0,
+            0,
+            0,
+            1400,
+            1050,
+            525,
+            875,
+            350,
             700,
             0,
             0,
@@ -1750,7 +2105,7 @@ export const LevelStats = {
             4331,
             101,
             0,
-            3035
+            15175
         ],
         "pointNumber": [
             1440,
@@ -1767,6 +2122,15 @@ export const LevelStats = {
             1080,
             360,
             900,
+            720,
+            0,
+            0,
+            0,
+            1440,
+            1080,
+            540,
+            900,
+            360,
             720,
             0,
             0,
@@ -1792,7 +2156,7 @@ export const LevelStats = {
             4520,
             101,
             0,
-            3272
+            16360
         ],
         "pointNumber": [
             1480,
@@ -1809,6 +2173,15 @@ export const LevelStats = {
             1110,
             370,
             925,
+            740,
+            0,
+            0,
+            0,
+            1480,
+            1110,
+            555,
+            925,
+            370,
             740,
             0,
             0,
@@ -1834,7 +2207,7 @@ export const LevelStats = {
             4710,
             101,
             0,
-            3522
+            17610
         ],
         "pointNumber": [
             1520,
@@ -1851,6 +2224,15 @@ export const LevelStats = {
             1140,
             380,
             950,
+            760,
+            0,
+            0,
+            0,
+            1520,
+            1140,
+            570,
+            950,
+            380,
             760,
             0,
             0,
@@ -1876,7 +2258,7 @@ export const LevelStats = {
             4906,
             101,
             0,
-            3783
+            18915
         ],
         "pointNumber": [
             1560,
@@ -1893,6 +2275,15 @@ export const LevelStats = {
             1170,
             390,
             975,
+            780,
+            0,
+            0,
+            0,
+            1560,
+            1170,
+            585,
+            975,
+            390,
             780,
             0,
             0,
@@ -1918,7 +2309,7 @@ export const LevelStats = {
             5103,
             101,
             0,
-            4058
+            20290
         ],
         "pointNumber": [
             1600,
@@ -1935,6 +2326,15 @@ export const LevelStats = {
             1200,
             400,
             1000,
+            800,
+            0,
+            0,
+            0,
+            1600,
+            1200,
+            600,
+            1000,
+            400,
             800,
             0,
             0,
@@ -1960,7 +2360,7 @@ export const LevelStats = {
             5600,
             101,
             0,
-            4346
+            43460
         ],
         "pointNumber": [
             1640,
@@ -1977,6 +2377,15 @@ export const LevelStats = {
             1230,
             410,
             1025,
+            820,
+            0,
+            0,
+            0,
+            1640,
+            1230,
+            615,
+            1025,
+            410,
             820,
             0,
             0,
@@ -2002,7 +2411,7 @@ export const LevelStats = {
             5819,
             101,
             0,
-            4646
+            46460
         ],
         "pointNumber": [
             1680,
@@ -2019,6 +2428,15 @@ export const LevelStats = {
             1260,
             420,
             1050,
+            840,
+            0,
+            0,
+            0,
+            1680,
+            1260,
+            630,
+            1050,
+            420,
             840,
             0,
             0,
@@ -2044,7 +2462,7 @@ export const LevelStats = {
             6039,
             101,
             0,
-            4961
+            49610
         ],
         "pointNumber": [
             1720,
@@ -2061,6 +2479,15 @@ export const LevelStats = {
             1290,
             430,
             1075,
+            860,
+            0,
+            0,
+            0,
+            1720,
+            1290,
+            645,
+            1075,
+            430,
             860,
             0,
             0,
@@ -2086,7 +2513,7 @@ export const LevelStats = {
             6263,
             101,
             0,
-            5289
+            52890
         ],
         "pointNumber": [
             1760,
@@ -2103,6 +2530,15 @@ export const LevelStats = {
             1320,
             440,
             1100,
+            880,
+            0,
+            0,
+            0,
+            1760,
+            1320,
+            660,
+            1100,
+            440,
             880,
             0,
             0,
@@ -2128,7 +2564,7 @@ export const LevelStats = {
             6494,
             101,
             0,
-            5632
+            56320
         ],
         "pointNumber": [
             1800,
@@ -2145,6 +2581,15 @@ export const LevelStats = {
             1350,
             450,
             1125,
+            900,
+            0,
+            0,
+            0,
+            1800,
+            1350,
+            675,
+            1125,
+            450,
             900,
             0,
             0,
@@ -2170,7 +2615,7 @@ export const LevelStats = {
             6728,
             101,
             0,
-            5989
+            59890
         ],
         "pointNumber": [
             1840,
@@ -2187,6 +2632,15 @@ export const LevelStats = {
             1380,
             460,
             1150,
+            920,
+            0,
+            0,
+            0,
+            1840,
+            1380,
+            690,
+            1150,
+            460,
             920,
             0,
             0,
@@ -2212,7 +2666,7 @@ export const LevelStats = {
             6961,
             101,
             0,
-            6361
+            63610
         ],
         "pointNumber": [
             1880,
@@ -2229,6 +2683,15 @@ export const LevelStats = {
             1410,
             470,
             1175,
+            940,
+            0,
+            0,
+            0,
+            1880,
+            1410,
+            705,
+            1175,
+            470,
             940,
             0,
             0,
@@ -2254,7 +2717,7 @@ export const LevelStats = {
             7203,
             101,
             0,
-            6748
+            67480
         ],
         "pointNumber": [
             1920,
@@ -2271,6 +2734,15 @@ export const LevelStats = {
             1440,
             480,
             1200,
+            960,
+            0,
+            0,
+            0,
+            1920,
+            1440,
+            720,
+            1200,
+            480,
             960,
             0,
             0,
@@ -2296,7 +2768,7 @@ export const LevelStats = {
             7448,
             101,
             0,
-            7150
+            71500
         ],
         "pointNumber": [
             1960,
@@ -2313,6 +2785,15 @@ export const LevelStats = {
             1470,
             490,
             1225,
+            980,
+            0,
+            0,
+            0,
+            1960,
+            1470,
+            735,
+            1225,
+            490,
             980,
             0,
             0,
@@ -2338,7 +2819,7 @@ export const LevelStats = {
             7698,
             101,
             0,
-            7568
+            75680
         ],
         "pointNumber": [
             2000,
@@ -2355,6 +2836,15 @@ export const LevelStats = {
             1500,
             500,
             1250,
+            1000,
+            0,
+            0,
+            0,
+            2000,
+            1500,
+            750,
+            1250,
+            500,
             1000,
             0,
             0,
@@ -2380,7 +2870,7 @@ export const LevelStats = {
             8366,
             101,
             0,
-            8002
+            80020
         ],
         "pointNumber": [
             2040,
@@ -2397,6 +2887,15 @@ export const LevelStats = {
             1530,
             510,
             1275,
+            1020,
+            0,
+            0,
+            0,
+            2040,
+            1530,
+            765,
+            1275,
+            510,
             1020,
             0,
             0,
@@ -2422,7 +2921,7 @@ export const LevelStats = {
             8635,
             101,
             0,
-            8452
+            84520
         ],
         "pointNumber": [
             2080,
@@ -2439,6 +2938,15 @@ export const LevelStats = {
             1560,
             520,
             1300,
+            1040,
+            0,
+            0,
+            0,
+            2080,
+            1560,
+            780,
+            1300,
+            520,
             1040,
             0,
             0,
@@ -2464,7 +2972,7 @@ export const LevelStats = {
             8908,
             101,
             0,
-            8919
+            89190
         ],
         "pointNumber": [
             2120,
@@ -2481,6 +2989,15 @@ export const LevelStats = {
             1590,
             530,
             1325,
+            1060,
+            0,
+            0,
+            0,
+            2120,
+            1590,
+            795,
+            1325,
+            530,
             1060,
             0,
             0,
@@ -2506,7 +3023,7 @@ export const LevelStats = {
             9186,
             101,
             0,
-            9403
+            94030
         ],
         "pointNumber": [
             2160,
@@ -2523,6 +3040,15 @@ export const LevelStats = {
             1620,
             540,
             1350,
+            1080,
+            0,
+            0,
+            0,
+            2160,
+            1620,
+            810,
+            1350,
+            540,
             1080,
             0,
             0,
@@ -2548,7 +3074,7 @@ export const LevelStats = {
             9467,
             101,
             0,
-            9904
+            99040
         ],
         "pointNumber": [
             2200,
@@ -2565,6 +3091,15 @@ export const LevelStats = {
             1650,
             550,
             1375,
+            1100,
+            0,
+            0,
+            0,
+            2200,
+            1650,
+            825,
+            1375,
+            550,
             1100,
             0,
             0,
@@ -2590,7 +3125,7 @@ export const LevelStats = {
             9752,
             101,
             0,
-            10423
+            104230
         ],
         "pointNumber": [
             2240,
@@ -2607,6 +3142,15 @@ export const LevelStats = {
             1680,
             560,
             1400,
+            1120,
+            0,
+            0,
+            0,
+            2240,
+            1680,
+            840,
+            1400,
+            560,
             1120,
             0,
             0,
@@ -2632,7 +3176,7 @@ export const LevelStats = {
             10042,
             101,
             0,
-            10959
+            109590
         ],
         "pointNumber": [
             2280,
@@ -2649,6 +3193,15 @@ export const LevelStats = {
             1710,
             570,
             1425,
+            1140,
+            0,
+            0,
+            0,
+            2280,
+            1710,
+            855,
+            1425,
+            570,
             1140,
             0,
             0,
@@ -2674,7 +3227,7 @@ export const LevelStats = {
             10336,
             101,
             0,
-            11514
+            115140
         ],
         "pointNumber": [
             2320,
@@ -2691,6 +3244,15 @@ export const LevelStats = {
             1740,
             580,
             1450,
+            1160,
+            0,
+            0,
+            0,
+            2320,
+            1740,
+            870,
+            1450,
+            580,
             1160,
             0,
             0,
@@ -2716,7 +3278,7 @@ export const LevelStats = {
             10634,
             101,
             0,
-            12086
+            120860
         ],
         "pointNumber": [
             2360,
@@ -2733,6 +3295,15 @@ export const LevelStats = {
             1770,
             590,
             1475,
+            1180,
+            0,
+            0,
+            0,
+            2360,
+            1770,
+            885,
+            1475,
+            590,
             1180,
             0,
             0,
@@ -2758,7 +3329,7 @@ export const LevelStats = {
             10935,
             101,
             0,
-            12678
+            126780
         ],
         "pointNumber": [
             2400,
@@ -2775,6 +3346,15 @@ export const LevelStats = {
             1800,
             600,
             1500,
+            1200,
+            0,
+            0,
+            0,
+            2400,
+            1800,
+            900,
+            1500,
+            600,
             1200,
             0,
             0,
@@ -2800,7 +3380,7 @@ export const LevelStats = {
             11803,
             101,
             0,
-            13289
+            132890
         ],
         "pointNumber": [
             2440,
@@ -2817,6 +3397,15 @@ export const LevelStats = {
             1830,
             610,
             1525,
+            1220,
+            0,
+            0,
+            0,
+            2440,
+            1830,
+            915,
+            1525,
+            610,
             1220,
             0,
             0,
@@ -2842,7 +3431,7 @@ export const LevelStats = {
             12131,
             101,
             0,
-            13918
+            139180
         ],
         "pointNumber": [
             2480,
@@ -2859,6 +3448,15 @@ export const LevelStats = {
             1860,
             620,
             1550,
+            1240,
+            0,
+            0,
+            0,
+            2480,
+            1860,
+            930,
+            1550,
+            620,
             1240,
             0,
             0,
@@ -2884,7 +3482,7 @@ export const LevelStats = {
             12458,
             101,
             0,
-            14568
+            145680
         ],
         "pointNumber": [
             2520,
@@ -2901,6 +3499,15 @@ export const LevelStats = {
             1890,
             630,
             1575,
+            1260,
+            0,
+            0,
+            0,
+            2520,
+            1890,
+            945,
+            1575,
+            630,
             1260,
             0,
             0,
@@ -2926,7 +3533,7 @@ export const LevelStats = {
             12792,
             101,
             0,
-            15237
+            152370
         ],
         "pointNumber": [
             2560,
@@ -2943,6 +3550,15 @@ export const LevelStats = {
             1920,
             640,
             1600,
+            1280,
+            0,
+            0,
+            0,
+            2560,
+            1920,
+            960,
+            1600,
+            640,
             1280,
             0,
             0,
@@ -2968,7 +3584,7 @@ export const LevelStats = {
             13129,
             101,
             0,
-            15927
+            159270
         ],
         "pointNumber": [
             2600,
@@ -2985,6 +3601,15 @@ export const LevelStats = {
             1950,
             650,
             1625,
+            1300,
+            0,
+            0,
+            0,
+            2600,
+            1950,
+            975,
+            1625,
+            650,
             1300,
             0,
             0,
@@ -3010,7 +3635,7 @@ export const LevelStats = {
             13475,
             101,
             0,
-            16637
+            166370
         ],
         "pointNumber": [
             2640,
@@ -3027,6 +3652,15 @@ export const LevelStats = {
             1980,
             660,
             1650,
+            1320,
+            0,
+            0,
+            0,
+            2640,
+            1980,
+            990,
+            1650,
+            660,
             1320,
             0,
             0,
@@ -3052,7 +3686,7 @@ export const LevelStats = {
             13821,
             101,
             0,
-            17368
+            173680
         ],
         "pointNumber": [
             2680,
@@ -3069,6 +3703,15 @@ export const LevelStats = {
             2010,
             670,
             1675,
+            1340,
+            0,
+            0,
+            0,
+            2680,
+            2010,
+            1005,
+            1675,
+            670,
             1340,
             0,
             0,
@@ -3094,7 +3737,7 @@ export const LevelStats = {
             14169,
             101,
             0,
-            18120
+            181200
         ],
         "pointNumber": [
             2720,
@@ -3111,6 +3754,15 @@ export const LevelStats = {
             2040,
             680,
             1700,
+            1360,
+            0,
+            0,
+            0,
+            2720,
+            2040,
+            1020,
+            1700,
+            680,
             1360,
             0,
             0,
@@ -3136,7 +3788,7 @@ export const LevelStats = {
             14523,
             101,
             0,
-            18893
+            188930
         ],
         "pointNumber": [
             2760,
@@ -3153,6 +3805,15 @@ export const LevelStats = {
             2070,
             690,
             1725,
+            1380,
+            0,
+            0,
+            0,
+            2760,
+            2070,
+            1035,
+            1725,
+            690,
             1380,
             0,
             0,
@@ -3178,7 +3839,7 @@ export const LevelStats = {
             14886,
             101,
             0,
-            19688
+            196880
         ],
         "pointNumber": [
             2800,
@@ -3195,6 +3856,15 @@ export const LevelStats = {
             2100,
             700,
             1750,
+            1400,
+            0,
+            0,
+            0,
+            2800,
+            2100,
+            1050,
+            1750,
+            700,
             1400,
             0,
             0,
@@ -3220,7 +3890,7 @@ export const LevelStats = {
             15976,
             101,
             0,
-            20505
+            205050
         ],
         "pointNumber": [
             2840,
@@ -3237,6 +3907,15 @@ export const LevelStats = {
             2130,
             710,
             1775,
+            1420,
+            0,
+            0,
+            0,
+            2840,
+            2130,
+            1065,
+            1775,
+            710,
             1420,
             0,
             0,
@@ -3262,7 +3941,7 @@ export const LevelStats = {
             16359,
             101,
             0,
-            21344
+            213440
         ],
         "pointNumber": [
             2880,
@@ -3279,6 +3958,15 @@ export const LevelStats = {
             2160,
             720,
             1800,
+            1440,
+            0,
+            0,
+            0,
+            2880,
+            2160,
+            1080,
+            1800,
+            720,
             1440,
             0,
             0,
@@ -3304,7 +3992,7 @@ export const LevelStats = {
             16752,
             101,
             0,
-            22206
+            222060
         ],
         "pointNumber": [
             2920,
@@ -3321,6 +4009,15 @@ export const LevelStats = {
             2190,
             730,
             1825,
+            1460,
+            0,
+            0,
+            0,
+            2920,
+            2190,
+            1095,
+            1825,
+            730,
             1460,
             0,
             0,
@@ -3346,7 +4043,7 @@ export const LevelStats = {
             17143,
             101,
             0,
-            23091
+            230910
         ],
         "pointNumber": [
             2960,
@@ -3363,6 +4060,15 @@ export const LevelStats = {
             2220,
             740,
             1850,
+            1480,
+            0,
+            0,
+            0,
+            2960,
+            2220,
+            1110,
+            1850,
+            740,
             1480,
             0,
             0,
@@ -3388,7 +4094,7 @@ export const LevelStats = {
             17543,
             101,
             0,
-            23999
+            239990
         ],
         "pointNumber": [
             3000,
@@ -3405,6 +4111,15 @@ export const LevelStats = {
             2250,
             750,
             1875,
+            1500,
+            0,
+            0,
+            0,
+            3000,
+            2250,
+            1125,
+            1875,
+            750,
             1500,
             0,
             0,
@@ -3430,7 +4145,7 @@ export const LevelStats = {
             17946,
             101,
             0,
-            24931
+            249310
         ],
         "pointNumber": [
             3040,
@@ -3447,6 +4162,15 @@ export const LevelStats = {
             2280,
             760,
             1900,
+            1520,
+            0,
+            0,
+            0,
+            3040,
+            2280,
+            1140,
+            1900,
+            760,
             1520,
             0,
             0,
@@ -3472,7 +4196,7 @@ export const LevelStats = {
             18355,
             101,
             0,
-            25886
+            258860
         ],
         "pointNumber": [
             3080,
@@ -3489,6 +4213,15 @@ export const LevelStats = {
             2310,
             770,
             1925,
+            1540,
+            0,
+            0,
+            0,
+            3080,
+            2310,
+            1155,
+            1925,
+            770,
             1540,
             0,
             0,
@@ -3514,7 +4247,7 @@ export const LevelStats = {
             18764,
             101,
             0,
-            26866
+            268660
         ],
         "pointNumber": [
             3120,
@@ -3531,6 +4264,15 @@ export const LevelStats = {
             2340,
             780,
             1950,
+            1560,
+            0,
+            0,
+            0,
+            3120,
+            2340,
+            1170,
+            1950,
+            780,
             1560,
             0,
             0,
@@ -3556,7 +4298,7 @@ export const LevelStats = {
             19184,
             101,
             0,
-            27869
+            278690
         ],
         "pointNumber": [
             3160,
@@ -3573,6 +4315,15 @@ export const LevelStats = {
             2370,
             790,
             1975,
+            1580,
+            0,
+            0,
+            0,
+            3160,
+            2370,
+            1185,
+            1975,
+            790,
             1580,
             0,
             0,
@@ -3598,7 +4349,7 @@ export const LevelStats = {
             19602,
             101,
             0,
-            28898
+            288980
         ],
         "pointNumber": [
             3200,
@@ -3615,6 +4366,15 @@ export const LevelStats = {
             2400,
             800,
             2000,
+            1600,
+            0,
+            0,
+            0,
+            3200,
+            2400,
+            1200,
+            2000,
+            800,
             1600,
             0,
             0,
@@ -3640,7 +4400,7 @@ export const LevelStats = {
             20939,
             101,
             0,
-            29952
+            299520
         ],
         "pointNumber": [
             3240,
@@ -3657,6 +4417,15 @@ export const LevelStats = {
             2430,
             810,
             2025,
+            1620,
+            0,
+            0,
+            0,
+            3240,
+            2430,
+            1215,
+            2025,
+            810,
             1620,
             0,
             0,
@@ -3682,7 +4451,7 @@ export const LevelStats = {
             21390,
             101,
             0,
-            31030
+            310300
         ],
         "pointNumber": [
             3280,
@@ -3699,6 +4468,15 @@ export const LevelStats = {
             2460,
             820,
             2050,
+            1640,
+            0,
+            0,
+            0,
+            3280,
+            2460,
+            1230,
+            2050,
+            820,
             1640,
             0,
             0,
@@ -3724,7 +4502,7 @@ export const LevelStats = {
             21841,
             101,
             0,
-            32135
+            321350
         ],
         "pointNumber": [
             3320,
@@ -3741,6 +4519,15 @@ export const LevelStats = {
             2490,
             830,
             2075,
+            1660,
+            0,
+            0,
+            0,
+            3320,
+            2490,
+            1245,
+            2075,
+            830,
             1660,
             0,
             0,
@@ -3766,7 +4553,7 @@ export const LevelStats = {
             22301,
             101,
             0,
-            33265
+            332650
         ],
         "pointNumber": [
             3360,
@@ -3783,6 +4570,15 @@ export const LevelStats = {
             2520,
             840,
             2100,
+            1680,
+            0,
+            0,
+            0,
+            3360,
+            2520,
+            1260,
+            2100,
+            840,
             1680,
             0,
             0,
@@ -3808,7 +4604,7 @@ export const LevelStats = {
             22765,
             101,
             0,
-            34422
+            344220
         ],
         "pointNumber": [
             3400,
@@ -3825,6 +4621,15 @@ export const LevelStats = {
             2550,
             850,
             2125,
+            1700,
+            0,
+            0,
+            0,
+            3400,
+            2550,
+            1275,
+            2125,
+            850,
             1700,
             0,
             0,
@@ -3850,7 +4655,7 @@ export const LevelStats = {
             23235,
             101,
             0,
-            35605
+            356050
         ],
         "pointNumber": [
             3440,
@@ -3867,6 +4672,15 @@ export const LevelStats = {
             2580,
             860,
             2150,
+            1720,
+            0,
+            0,
+            0,
+            3440,
+            2580,
+            1290,
+            2150,
+            860,
             1720,
             0,
             0,
@@ -3892,7 +4706,7 @@ export const LevelStats = {
             23704,
             101,
             0,
-            36815
+            368150
         ],
         "pointNumber": [
             3480,
@@ -3909,6 +4723,15 @@ export const LevelStats = {
             2610,
             870,
             2175,
+            1740,
+            0,
+            0,
+            0,
+            3480,
+            2610,
+            1305,
+            2175,
+            870,
             1740,
             0,
             0,
@@ -3934,7 +4757,7 @@ export const LevelStats = {
             24183,
             101,
             0,
-            38052
+            380520
         ],
         "pointNumber": [
             3520,
@@ -3951,6 +4774,15 @@ export const LevelStats = {
             2640,
             880,
             2200,
+            1760,
+            0,
+            0,
+            0,
+            3520,
+            2640,
+            1320,
+            2200,
+            880,
             1760,
             0,
             0,
@@ -3976,7 +4808,7 @@ export const LevelStats = {
             24666,
             101,
             0,
-            39316
+            393160
         ],
         "pointNumber": [
             3560,
@@ -3993,6 +4825,15 @@ export const LevelStats = {
             2670,
             890,
             2225,
+            1780,
+            0,
+            0,
+            0,
+            3560,
+            2670,
+            1335,
+            2225,
+            890,
             1780,
             0,
             0,
@@ -4018,7 +4859,7 @@ export const LevelStats = {
             25154,
             101,
             0,
-            40608
+            406080
         ],
         "pointNumber": [
             3600,
@@ -4035,6 +4876,15 @@ export const LevelStats = {
             2700,
             900,
             2250,
+            1800,
+            0,
+            0,
+            0,
+            3600,
+            2700,
+            1350,
+            2250,
+            900,
             1800,
             0,
             0,
@@ -4060,7 +4910,7 @@ export const LevelStats = {
             26758,
             101,
             0,
-            41928
+            419280
         ],
         "pointNumber": [
             3640,
@@ -4077,6 +4927,15 @@ export const LevelStats = {
             2730,
             910,
             2275,
+            1820,
+            0,
+            0,
+            0,
+            3640,
+            2730,
+            1365,
+            2275,
+            910,
             1820,
             0,
             0,
@@ -4102,7 +4961,7 @@ export const LevelStats = {
             27274,
             101,
             0,
-            43276
+            432760
         ],
         "pointNumber": [
             3680,
@@ -4119,6 +4978,15 @@ export const LevelStats = {
             2760,
             920,
             2300,
+            1840,
+            0,
+            0,
+            0,
+            3680,
+            2760,
+            1380,
+            2300,
+            920,
             1840,
             0,
             0,
@@ -4144,7 +5012,7 @@ export const LevelStats = {
             27798,
             101,
             0,
-            44653
+            446530
         ],
         "pointNumber": [
             3720,
@@ -4161,6 +5029,15 @@ export const LevelStats = {
             2790,
             930,
             2325,
+            1860,
+            0,
+            0,
+            0,
+            3720,
+            2790,
+            1395,
+            2325,
+            930,
             1860,
             0,
             0,
@@ -4186,7 +5063,7 @@ export const LevelStats = {
             28324,
             101,
             0,
-            46059
+            460590
         ],
         "pointNumber": [
             3760,
@@ -4203,6 +5080,15 @@ export const LevelStats = {
             2820,
             940,
             2350,
+            1880,
+            0,
+            0,
+            0,
+            3760,
+            2820,
+            1410,
+            2350,
+            940,
             1880,
             0,
             0,
@@ -4228,7 +5114,7 @@ export const LevelStats = {
             28858,
             101,
             0,
-            47494
+            474940
         ],
         "pointNumber": [
             3800,
@@ -4245,6 +5131,15 @@ export const LevelStats = {
             2850,
             950,
             2375,
+            1900,
+            0,
+            0,
+            0,
+            3800,
+            2850,
+            1425,
+            2375,
+            950,
             1900,
             0,
             0,
@@ -4270,7 +5165,7 @@ export const LevelStats = {
             29393,
             101,
             0,
-            48959
+            489590
         ],
         "pointNumber": [
             3840,
@@ -4287,6 +5182,15 @@ export const LevelStats = {
             2880,
             960,
             2400,
+            1920,
+            0,
+            0,
+            0,
+            3840,
+            2880,
+            1440,
+            2400,
+            960,
             1920,
             0,
             0,
@@ -4312,7 +5216,7 @@ export const LevelStats = {
             29936,
             101,
             0,
-            50453
+            504530
         ],
         "pointNumber": [
             3880,
@@ -4329,6 +5233,15 @@ export const LevelStats = {
             2910,
             970,
             2425,
+            1940,
+            0,
+            0,
+            0,
+            3880,
+            2910,
+            1455,
+            2425,
+            970,
             1940,
             0,
             0,
@@ -4354,7 +5267,7 @@ export const LevelStats = {
             30482,
             101,
             0,
-            51978
+            519780
         ],
         "pointNumber": [
             3920,
@@ -4371,6 +5284,15 @@ export const LevelStats = {
             2940,
             980,
             2450,
+            1960,
+            0,
+            0,
+            0,
+            3920,
+            2940,
+            1470,
+            2450,
+            980,
             1960,
             0,
             0,
@@ -4396,7 +5318,7 @@ export const LevelStats = {
             31035,
             101,
             0,
-            53532
+            535320
         ],
         "pointNumber": [
             3960,
@@ -4413,6 +5335,15 @@ export const LevelStats = {
             2970,
             990,
             2475,
+            1980,
+            0,
+            0,
+            0,
+            3960,
+            2970,
+            1485,
+            2475,
+            990,
             1980,
             0,
             0,
@@ -4450,6 +5381,15 @@ export const LevelStats = {
             3000,
             1000,
             2500,
+            2000,
+            0,
+            0,
+            0,
+            4000,
+            3000,
+            1500,
+            2500,
+            1000,
             2000,
             0,
             0,
@@ -4534,9 +5474,213 @@ export const Pure = [
         logo:'https://app.elemon.io/assets/images/purity_Pure.png'
     },
 ]
-export const LevelCost = {1:0,2:20,3:42,4:69,5:103,6:145,7:198,8:265,9:349,10:453,11:581,12:737,13:925,14:1150,15:1417,16:1731,17:2098,18:2523,19:3013,20:3573,21:4211,22:4934,23:5748,24:6662,25:7683,26:8820,27:10081,28:11475,29:13011,30:14698,31:16546,32:18564,33:20764,34:23156,35:25751,36:28556,37:31591,38:34863,39:38385,40:42168,41:46226,42:50572,43:55218,44:60179,45:65468,46:71100,47:77089,48:83450,49:90198,50:97348,51:104916,52:112918,53:121370,54:130289,55:139793,56:149697,57:160120,58:171079,59:182593,60:194679}
+export const LevelCost ={
+    "0": 0,
+    "1": 0,
+    "2": 20,
+    "3": 42,
+    "4": 69,
+    "5": 102,
+    "6": 144,
+    "7": 197,
+    "8": 264,
+    "9": 348,
+    "10": 452,
+    "11": 580,
+    "12": 736,
+    "13": 924,
+    "14": 1149,
+    "15": 1416,
+    "16": 1730,
+    "17": 2097,
+    "18": 2522,
+    "19": 3012,
+    "20": 3572,
+    "21": 4210,
+    "22": 7825,
+    "23": 11895,
+    "24": 16465,
+    "25": 21570,
+    "26": 27255,
+    "27": 33560,
+    "28": 40530,
+    "29": 48210,
+    "30": 56645,
+    "31": 65885,
+    "32": 75980,
+    "33": 86980,
+    "34": 98940,
+    "35": 111915,
+    "36": 125960,
+    "37": 141135,
+    "38": 157495,
+    "39": 175105,
+    "40": 194020,
+    "41": 214310,
+    "42": 257770,
+    "43": 304230,
+    "44": 353840,
+    "45": 406730,
+    "46": 463050,
+    "47": 522940,
+    "48": 586550,
+    "49": 654030,
+    "50": 725530,
+    "51": 801210,
+    "52": 881230,
+    "53": 965750,
+    "54": 1054940,
+    "55": 1148970,
+    "56": 1248010,
+    "57": 1352240,
+    "58": 1461830,
+    "59": 1576970,
+    "60": 1697830,
+    "61": 1824610,
+    "62": 1957500,
+    "63": 2096680,
+    "64": 2242360,
+    "65": 2394730,
+    "66": 2554000,
+    "67": 2720370,
+    "68": 2894050,
+    "69": 3075250,
+    "70": 3264180,
+    "71": 3461060,
+    "72": 3666110,
+    "73": 3879550,
+    "74": 4101610,
+    "75": 4332520,
+    "76": 4572510,
+    "77": 4821820,
+    "78": 5080680,
+    "79": 5349340,
+    "80": 5628030,
+    "81": 5917010,
+    "82": 6216530,
+    "83": 6526830,
+    "84": 6848180,
+    "85": 7180830,
+    "86": 7525050,
+    "87": 7881100,
+    "88": 8249250,
+    "89": 8629770,
+    "90": 9022930,
+    "91": 9429010,
+    "92": 9848290,
+    "93": 10281050,
+    "94": 10727580,
+    "95": 11188170,
+    "96": 11663110,
+    "97": 12152700,
+    "98": 12657230,
+    "99": 13177010,
+    "100": 13712330
+}
 export const StartCost = {0:0,1:5,2:14,3:32,4:62,5:107,6:176,7:273,8:402,9:576}
-export const SkillCost = {0:0,1:0,2:100,3:214,4:350,5:518,6:729,7:995,8:1330,9:1750,10:2272,11:2914,12:3696,13:4640,14:5769,15:7107,16:8680,17:10516,18:12644,19:15094,20:17898,21:21090,22:24705,23:28779,24:33350,25:38458,26:44144,27:50450,28:57420,29:65140,30:73577}
+export const SkillCost ={
+    "0": 0,
+    "1": 0,
+    "2": 100,
+    "3": 214,
+    "4": 350,
+    "5": 518,
+    "6": 729,
+    "7": 995,
+    "8": 1330,
+    "9": 1750,
+    "10": 2272,
+    "11": 2914,
+    "12": 6824,
+    "13": 11544,
+    "14": 17189,
+    "15": 23879,
+    "16": 31744,
+    "17": 40924,
+    "18": 51564,
+    "19": 63814,
+    "20": 77834,
+    "21": 93794,
+    "22": 129944,
+    "23": 170684,
+    "24": 216394,
+    "25": 267474,
+    "26": 324334,
+    "27": 387394,
+    "28": 457094,
+    "29": 533894,
+    "30": 618264,
+    "31": 710684,
+    "32": 811654,
+    "33": 921694,
+    "34": 1041334,
+    "35": 1171114,
+    "36": 1311594,
+    "37": 1463354,
+    "38": 1626984,
+    "39": 1803084,
+    "40": 1992274,
+    "41": 2195194,
+    "42": 2412494,
+    "43": 2644834,
+    "44": 2892894,
+    "45": 3157374,
+    "46": 3438984,
+    "47": 3738444,
+    "48": 4056494,
+    "49": 4393894,
+    "50": 4751414,
+    "51": 5129834,
+    "52": 5529954,
+    "53": 5952594,
+    "54": 6398584,
+    "55": 6868764,
+    "56": 7363994,
+    "57": 7885154,
+    "58": 8433134,
+    "59": 9008834,
+    "60": 9613174,
+    "61": 10247094,
+    "62": 10911544,
+    "63": 11607484,
+    "64": 12335894,
+    "65": 13097774,
+    "66": 13894134,
+    "67": 14725994,
+    "68": 15594394,
+    "69": 16500394,
+    "70": 17445064,
+    "71": 18429484,
+    "72": 19454754,
+    "73": 20521994,
+    "74": 21632334,
+    "75": 22786914,
+    "76": 23986894,
+    "77": 25233454,
+    "78": 26527784,
+    "79": 27871084,
+    "80": 29264574,
+    "81": 30709494,
+    "82": 32207094,
+    "83": 33758634,
+    "84": 35365394,
+    "85": 37028674,
+    "86": 38749784,
+    "87": 40530044,
+    "88": 42370794,
+    "89": 44273394,
+    "90": 46239214,
+    "91": 48269634,
+    "92": 50366054,
+    "93": 52529894,
+    "94": 54762584,
+    "95": 57065564,
+    "96": 59440294,
+    "97": 61888254,
+    "98": 64410934,
+    "99": 67009834,
+    "100": 69686474
+}
 export const newRare = {
     "B":1,
     "A":2,
@@ -4568,3 +5712,4 @@ export const newClass = {
 
 export const APP_ID = process.env.REACT_APP_MORALIS_APPLICATION_ID;
 export const SERVER_URL = process.env.REACT_APP_MORALIS_SERVER_URL;
+

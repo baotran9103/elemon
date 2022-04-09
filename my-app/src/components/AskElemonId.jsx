@@ -13,40 +13,50 @@ function AskElemonId({ open, handleClose }) {
   const myContext = useContext(ElemonContext);
   const updateData = myContext.updateData;
   const updateMore = myContext.updateMore;
-  async function getElemonInfo() {
-    
+
+  async function getInfo(myID) {
+    let infourl = `https://elemons.baotran17.repl.co/api/elemons/${myID}`;
+    axios
+      .get(infourl)
+      .then((result) => {
+        if (result.data) {
+          let t = result.data;
+          if (!t) {
+            alert("Could not get more Elemon Info, please enter manually !");
+          } else {
+            updateMore(t);
+          }
+        }
+      })
+      .catch((err) => {
+
+        console.log("Could not get more Elemon Info, please enter manually !");
+        console.log(err.message);
+      });
+  }
+
+  async function getElemonInfo(e) {
     const url = `https://app.elemon.io/elemon/getElemonInfo?tokenId=${myID}`;
     // const url = `https://elemons.baotran17.repl.co/api/elemons/${myID}`
+    e.preventDefault();
     axios
       .get(url)
       .then((res) => {
         updateData(res.data.data);
-        let infourl =`https://elemons.baotran17.repl.co/api/elemons/${myID}`
-        axios.get(infourl).then(result=>{
-        
-          if(result.data){
-            let t = result.data
-            // if(!t.data){
-            //   alert("Could not get more Elemon Info, please enter manually !")
-            // }
-            // console.log(t)
-            if(!t){
-              alert("Could not get more Elemon Info, please enter manually !")
-            }
-            else{
-              // console.log(t)
-              // updateMore(t.data)
-              updateMore(t)
-            }
-          }
-        }).catch(err=>alert(err.message))
+        getInfo(myID);
       })
-      .catch((e) => console.log(e.message));
+      .catch((e) => {
+        alert("Could not get more skills Info, please enter manually !");
+
+        console.log(e.message);
+        getInfo(myID);
+      });
     handleClose();
   }
   return (
     <div>
       <Dialog open={open} onClose={handleClose}>
+        <form action="c" onSubmit={getElemonInfo}>
         <DialogTitle>Get Elemon ID</DialogTitle>
         <DialogContent>
           {/* <DialogContentText>
@@ -68,10 +78,12 @@ function AskElemonId({ open, handleClose }) {
           <Button size="medium" variant="contained" onClick={handleClose}>
             Cancel
           </Button>
-          <Button size="medium" variant="contained" onClick={getElemonInfo}>
+          <Button size="medium" variant="contained" type='submit' >
             Get Elemon
           </Button>
         </DialogActions>
+        </form>
+        
       </Dialog>
     </div>
   );
