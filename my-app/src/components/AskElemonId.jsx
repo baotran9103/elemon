@@ -30,14 +30,15 @@ function AskElemonId({ open, handleClose }) {
       })
       .catch((err) => {
 
-        alert("Could not get more Elemon Info, please enter manually !");
+        console.log("Could not get more Elemon Info, please enter manually !");
         console.log(err.message);
       });
   }
 
-  async function getElemonInfo() {
+  async function getElemonInfo(e) {
     const url = `https://app.elemon.io/elemon/getElemonInfo?tokenId=${myID}`;
     // const url = `https://elemons.baotran17.repl.co/api/elemons/${myID}`
+    e.preventDefault();
     axios
       .get(url)
       .then((res) => {
@@ -55,6 +56,7 @@ function AskElemonId({ open, handleClose }) {
   return (
     <div>
       <Dialog open={open} onClose={handleClose}>
+        <form action="c" onSubmit={getElemonInfo}>
         <DialogTitle>Get Elemon ID</DialogTitle>
         <DialogContent>
           {/* <DialogContentText>
@@ -76,10 +78,12 @@ function AskElemonId({ open, handleClose }) {
           <Button size="medium" variant="contained" onClick={handleClose}>
             Cancel
           </Button>
-          <Button size="medium" variant="contained" onClick={getElemonInfo}>
+          <Button size="medium" variant="contained" type='submit' >
             Get Elemon
           </Button>
         </DialogActions>
+        </form>
+        
       </Dialog>
     </div>
   );
