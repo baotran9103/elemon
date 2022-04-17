@@ -92,6 +92,7 @@ function Pets() {
           />
         ))}
       </div>
+  
       {open && (
         <Dialog
           open={open}

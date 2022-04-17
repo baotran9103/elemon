@@ -19,8 +19,8 @@ const CustomSelect = ({
       setvalue(event.target.value);
     };
     return (
-      <div id={id}>
-        <FormControl sx={{ m: 1, minWidth: 200, maxWidth: 300 }}>
+      <div  id={id}>
+        <FormControl sx={{ m: 1, minWidth: 100, maxWidth: 150 }}>
           <InputLabel id="demo-simple-select-helper-label">{Label}</InputLabel>
           <Select
             labelId="demo-simple-select-helper-label"

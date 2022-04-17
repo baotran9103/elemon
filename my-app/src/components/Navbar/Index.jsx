@@ -62,6 +62,7 @@ function Index() {
               >
                 <MenuItem onClick={handlePageMenuClose}><Link className='navlink ' to='/'>Get Power</Link></MenuItem>
                 <MenuItem onClick={handlePageMenuClose}><Link className='navlink' to='/market'>Marketplace</Link></MenuItem>
+                <MenuItem onClick={handlePageMenuClose}><Link className='navlink' to='/Rank'>PVP Rank</Link></MenuItem>
                 <MenuItem onClick={handlePageMenuClose}><Link className='navlink' to='/challenge'>Challenge</Link></MenuItem>
               </Menu>
           <div style={{ display: "flex", alignItems: "center", flexGrow: 1 }}>

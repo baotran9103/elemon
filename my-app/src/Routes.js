@@ -6,7 +6,7 @@ import MarketPlace from "./components/MarketPlace/Index";
 import Elemon from "./components/Elemon";
 import PetSimulation from './components/PetSimulation/Index.jsx'
 import Challenge from './components/Challenge/Index.jsx'
-
+import Rank from './components/rank/index'
 function MyRoutes() {
   return (
     <Routes>
@@ -16,6 +16,7 @@ function MyRoutes() {
     />
 
     <Route path="/market" element={<MarketPlace />} />
+    <Route path="/rank" element={<Rank />} />
     <Route path="/challenge" element={<Challenge />} />
 
     <Route

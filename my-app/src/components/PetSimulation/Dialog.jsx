@@ -97,7 +97,7 @@ const handleClickOpenDialog = () => {
         onClose={closeHandler}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        fullWidth
+        fullWidth 
       >
         <Toolbar sx={{ justifyContent: "flex-end" }}>
           <Button
@@ -115,7 +115,7 @@ const handleClickOpenDialog = () => {
         <DialogTitle id="alert-dialog-title" sx={{ textAlign:'center'}} variant='primary'>
           {"Edit Pet Information"}
         </DialogTitle>
-        <DialogContent>
+        <DialogContent >
         
             <Elemon pet={thisPet} setpet ={setthisPet} myValues={[dialogopen, setdialogopen]}/>
           

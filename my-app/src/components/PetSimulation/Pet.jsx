@@ -7,6 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import CardMedia from "@mui/material/CardMedia";
 import { PetsContext } from "./PetsContext";
 import Stack from "@mui/material/Stack";
+// import './pets.css'
 import * as data from "../utils/Data";
 function Pet({ pet, open, setopen, idx, pets, setpets }) {
   const myContext = useContext(PetsContext);
@@ -41,14 +42,18 @@ function Pet({ pet, open, setopen, idx, pets, setpets }) {
             sx={{ objectFit: "contain" }}
           />
         </div>
-
-        <CardMedia
+            <div >
+            <CardMedia
           component="img"
           height="194"
           image={`https://statics.elemon.io/avatar/${pet.petId}/${pet.petId}_${pet.body1}_${pet.body2}_${pet.body3}_${pet.body4}_${pet.body5}_${pet.body6}.png`}
           alt="My Pet"
           sx={{ objectFit: "contain" }}
         />
+        {/* <img src={`https://statics.elemon.io/avatar/${pet.petId}/${pet.petId}_${pet.body1}_${pet.body2}_${pet.body3}_${pet.body4}_${pet.body5}_${pet.body6}.png`} alt="" /> */}
+        {/* <div className="img_aura"></div> */}
+            </div>
+        
         <div
           style={{
             display: "flex",

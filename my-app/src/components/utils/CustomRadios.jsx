@@ -8,7 +8,7 @@ function CustomRadios({id,label,defaultValue,items,itemID,itemName,useValues,row
     const [value, setvalue] = useValues
   return (
     <div id={id} >
-      <FormControl style={{display:'grid',minHeight:'150px',gridTemplateColumns:'1fr',padding:'1rem 1.5rem',margin:'0.5rem',border:'1px solid rgba(0,0,0,0.2)',borderRadius:'0.5rem'}}>
+      <FormControl style={{display:'grid',minHeight:'150px',gridTemplateColumns:'1fr',padding:'1rem ',margin:'0.5rem',border:'1px solid rgba(0,0,0,0.2)',borderRadius:'0.5rem'}}>
         <FormLabel id="demo-radio-buttons-group-label" >{label}</FormLabel>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
