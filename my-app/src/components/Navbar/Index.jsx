@@ -32,9 +32,9 @@ function Index() {
     setmenuEl(null);
   };
   return (
-    <div>
-      <AppBar position="static">
-        <Toolbar>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" >
+        <Toolbar >
           <IconButton
             size="large"
             edge="start"
@@ -113,7 +113,7 @@ function Index() {
           )}
         </Toolbar>
       </AppBar>
-    </div>
+    </Box>
   );
 }
 
